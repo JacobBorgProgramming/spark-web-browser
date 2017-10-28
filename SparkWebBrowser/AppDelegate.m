@@ -2229,7 +2229,7 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
     
     if (keys != nil) {
         self.loadStatusIndicator.animator.alphaValue = 1; // Set alpha value to 1
-        [self.loadStatusIndicatorText setStringValue:[NSString stringWithFormat:@"%@",keys]];
+        [self.loadStatusIndicatorText setStringValue:[NSString stringWithFormat:@"%@", keys]];
     } else {
         [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context) {
             context.duration = 0.5;
