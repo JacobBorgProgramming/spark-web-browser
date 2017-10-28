@@ -54,10 +54,10 @@ NSString *currentChromeVersion = @"62.0.3202.75";
 /* Appcast URL strings */
 
 /// Stable channel appcast URL
-NSString *stableChannelAppcastURL = @"https://insleep.tech/spark/appcast.xml";
+NSString *stableChannelAppcastURL = @"https://spark.insleep.tech/appcast.xml";
 
 /// Nightly channel appcast URL
-NSString *nightlyChannelAppcastURL = @"https://insleep.tech/spark/appcast-dev.xml";
+NSString *nightlyChannelAppcastURL = @"https://spark.insleep.tech/appcast-dev.xml";
 
 
 /* Search engine query strings */
