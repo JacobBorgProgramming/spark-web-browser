@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="13196"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="13771"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
@@ -529,7 +529,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" id="JIE-U0-fhO">
                             <font key="font" metaFont="miniSystem"/>
-                            <string key="title">Copyright © 2014-2017 Insleep. All rights reserved.
+                            <string key="title">Copyright © 2014-2018 Insleep. All rights reserved.
 Spark is made possible by the WebKit open source project and other open source software.
 </string>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1909,7 +1909,7 @@ DQ
         </window>
     </objects>
     <resources>
-        <image name="AppIcon256" width="30.719999313354492" height="30.719999313354492"/>
+        <image name="AppIcon256" width="61.439998626708984" height="61.439998626708984"/>
         <image name="NSActionTemplate" width="14" height="14"/>
         <image name="NSAddTemplate" width="11" height="11"/>
         <image name="NSBookmarksTemplate" width="17" height="18"/>
@@ -1921,9 +1921,9 @@ DQ
         <image name="NSMenuOnStateTemplate" width="12" height="12"/>
         <image name="NSRefreshTemplate" width="11" height="15"/>
         <image name="NSStopProgressFreestandingTemplate" width="14" height="14"/>
-        <image name="bing-search-engine-icon" width="16" height="16"/>
-        <image name="duckduckgo-search-engine-icon" width="16" height="16"/>
-        <image name="google-search-engine-icon" width="16" height="16"/>
-        <image name="yahoo-search-engine-icon" width="16" height="16"/>
+        <image name="bing-search-engine-icon" width="32" height="32"/>
+        <image name="duckduckgo-search-engine-icon" width="32" height="32"/>
+        <image name="google-search-engine-icon" width="32" height="32"/>
+        <image name="yahoo-search-engine-icon" width="32" height="32"/>
     </resources>
 </document>
