@@ -803,21 +803,39 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
 
 - (IBAction)addBookmark:(id)sender {
     self.bookmarkAddedName.stringValue = [NSString stringWithFormat:@"%@", self.webView.mainFrameTitle];
-    self.bookmarkAddedURL.stringValue = [NSString stringWithFormat:@"%@", self.webView.mainFrameURL];
+    
+    if([self.addressBar.stringValue hasPrefix:@"spark://"]) { // Check whether or not we're dealing with a spark:// URL
+        self.bookmarkAddedURL.stringValue = [NSString stringWithFormat:@"%@", self.addressBar.stringValue]; // Use address bar string value to mask actual URL of local page
+    } else {
+        self.bookmarkAddedURL.stringValue = [NSString stringWithFormat:@"%@", self.webView.mainFrameURL]; // Use actual page URL
+    }
+    
     self.bookmarkAddedView.hidden = NO;
 }
 
 - (IBAction)addBookmarkAddressBar:(id)sender {
     if([defaults objectForKey:@"bookmarkViewOpen"] == nil) {
         self.bookmarkAddedName.stringValue = [NSString stringWithFormat:@"%@", self.webView.mainFrameTitle];
-        self.bookmarkAddedURL.stringValue = [NSString stringWithFormat:@"%@", self.webView.mainFrameURL];
+        
+        if([self.addressBar.stringValue hasPrefix:@"spark://"]) { // Check whether or not we're dealing with a spark:// URL
+            self.bookmarkAddedURL.stringValue = [NSString stringWithFormat:@"%@", self.addressBar.stringValue]; // Use address bar string value to mask actual URL of local page
+        } else {
+            self.bookmarkAddedURL.stringValue = [NSString stringWithFormat:@"%@", self.webView.mainFrameURL]; // Use actual page URL
+        }
+        
         self.bookmarkAddedView.hidden = NO;
         [defaults setBool:YES forKey:@"bookmarkViewOpen"];
     }
     
     if([defaults boolForKey:@"bookmarkViewOpen"] == NO) {
         self.bookmarkAddedName.stringValue = [NSString stringWithFormat:@"%@", self.webView.mainFrameTitle];
-        self.bookmarkAddedURL.stringValue = [NSString stringWithFormat:@"%@", self.webView.mainFrameURL];
+        
+        if([self.addressBar.stringValue hasPrefix:@"spark://"]) { // Check whether or not we're dealing with a spark:// URL
+            self.bookmarkAddedURL.stringValue = [NSString stringWithFormat:@"%@", self.addressBar.stringValue]; // Use address bar string value to mask actual URL of local page
+        } else {
+            self.bookmarkAddedURL.stringValue = [NSString stringWithFormat:@"%@", self.webView.mainFrameURL]; // Use actual page URL
+        }
+        
         self.bookmarkAddedView.hidden = NO;
         [defaults setBool:YES forKey:@"bookmarkViewOpen"];
     } else if([defaults boolForKey:@"bookmarkViewOpen"] == YES) {
