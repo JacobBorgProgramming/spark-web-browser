@@ -1577,7 +1577,7 @@ Gw
                             </textField>
                         </subviews>
                     </customView>
-                    <customView wantsLayer="YES" misplaced="YES" id="yET-9q-S0G">
+                    <customView hidden="YES" wantsLayer="YES" misplaced="YES" id="yET-9q-S0G">
                         <rect key="frame" x="775" y="457" width="326" height="159"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" heightSizable="YES"/>
                         <subviews>
@@ -1614,7 +1614,7 @@ Gw
                             <textField verticalHuggingPriority="750" misplaced="YES" textCompletion="NO" id="VEY-SJ-d0j">
                                 <rect key="frame" x="77" y="85" width="205" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" title="SPKBookmarkSiteName" placeholderString="" bezelStyle="round" id="cXF-Uj-ECj">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" title="SPKBookmarkSiteName" placeholderString="" drawsBackground="YES" id="cXF-Uj-ECj">
                                     <font key="font" metaFont="cellTitle"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>

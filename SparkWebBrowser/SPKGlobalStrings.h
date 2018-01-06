@@ -62,26 +62,49 @@ NSString *nightlyChannelAppcastURL = @"https://spark.insleep.tech/appcast-dev.xm
 
 /* Search engine query strings */
 
+/// Google search query string
 NSString *googleSearchString = @"https://www.google.com/search?q=%@";
+
+/// Bing search query string
 NSString *bingSearchString = @"https://www.bing.com/search?q=%@";
+
+/// Yahoo search query string
 NSString *yahooSearchString = @"https://search.yahoo.com/search?p=%@";
+
+/// Duck Duck Go search query string
 NSString *duckDuckGoSearchString = @"https://www.duckduckgo.com/%@";
+
+/// Custom search query string
 NSString *customSearchString = nil;
 
 
 /* Search engine default homepages */
 
+/// Google default homepage
 NSString *googleDefaultURL = @"https://www.google.com/";
+
+/// Bing default homepage
 NSString *bingDefaultURL = @"https://www.bing.com/";
+
+/// Yahoo default homepage
 NSString *yahooDefaultURL = @"https://www.yahoo.com/";
+
+/// Duck Duck Go default homepage
 NSString *duckDuckGoDefaultURL = @"https://www.duckduckgo.com/";
 
 
 /* Strings for "Help" menu bar item */
 
+/// Spark issue report URL
 NSString *appReportIssueURL = @"https://www.github.com/insleep/spark-web-browser/issues/new?title=Describe%20your%20feature%20request%20or%20bug%20report,%20succinctly&body=**Spark%20version:**%20%0A%20**Spark%20build:**%20%0A%20**Release%20channel:**%20%0A%20**macOS%20version:**%20%0A%0A%20**Description:**%20%0A%0A%20**Steps%20to%20reproduce:**%20%0A%0A%20**Expected%20results:**%20%0A%0A%20**Actual%20results:**%20";
+
+/// Spark existing issues URL
 NSString *appExistingIssuesURL = @"https://www.github.com/insleep/spark-web-browser/issues/";
+
+/// Spark update release list
 NSString *appReleasesURL = @"https://www.github.com/insleep/spark-web-browser/releases/tag/%@/";
+
+/// Spark roadmap URL
 NSString *appRoadmapURL = @"https://trello.com/b/TPd5oizl/spark-roadmap/";
 
 
