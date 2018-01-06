@@ -77,6 +77,7 @@
 @property (assign, nonatomic) IBOutlet NSButton *showHomeBtn;
 @property (assign, nonatomic) IBOutlet NSView *bookmarkAddedView;
 @property (assign, nonatomic) IBOutlet NSTextField *bookmarkAddedName;
+@property (assign, nonatomic) IBOutlet NSTextField *bookmarkAddedURL;
 @property (assign, nonatomic) IBOutlet NSView *loadStatusIndicator;
 @property (assign, nonatomic) IBOutlet NSTextField *loadStatusIndicatorText;
 @property (assign, nonatomic) IBOutlet NSButton *enableLoadStatusIndicatorBtn;

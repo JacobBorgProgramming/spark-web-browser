@@ -22,6 +22,7 @@
                 <outlet property="addressBar" destination="6S4-CW-iwm" id="yLL-ye-fyR"/>
                 <outlet property="backBtn" destination="CSR-Ik-wrT" id="9ar-Ai-zKp"/>
                 <outlet property="bookmarkAddedName" destination="VEY-SJ-d0j" id="xDv-cR-RhI"/>
+                <outlet property="bookmarkAddedURL" destination="3Wp-9I-oiT" id="2Cy-Gq-RuY"/>
                 <outlet property="bookmarkAddedView" destination="yET-9q-S0G" id="4Go-sb-pI0"/>
                 <outlet property="browsingDataClearedIcon" destination="orl-ej-3FT" id="h1g-T3-V9O"/>
                 <outlet property="bytesDownloadedText" destination="dwf-zl-wLW" id="euM-ql-uB0"/>
@@ -1576,12 +1577,12 @@ Gw
                             </textField>
                         </subviews>
                     </customView>
-                    <customView hidden="YES" wantsLayer="YES" misplaced="YES" id="yET-9q-S0G">
-                        <rect key="frame" x="775" y="492" width="326" height="124"/>
+                    <customView wantsLayer="YES" misplaced="YES" id="yET-9q-S0G">
+                        <rect key="frame" x="775" y="457" width="326" height="159"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" heightSizable="YES"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="fhM-ya-3YI">
-                                <rect key="frame" x="20" y="8" width="286" height="96"/>
+                                <rect key="frame" x="20" y="20" width="286" height="119"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <shadow key="shadow" blurRadius="2">
                                     <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1593,7 +1594,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="TAy-iy-MF8">
-                                <rect key="frame" x="29" y="78" width="121" height="18"/>
+                                <rect key="frame" x="29" y="113" width="121" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Create Bookmark" id="1fm-Du-ZKf">
                                     <font key="font" metaFont="systemSemibold" size="14"/>
@@ -1602,7 +1603,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="4Ge-N4-X01">
-                                <rect key="frame" x="29" y="53" width="44" height="17"/>
+                                <rect key="frame" x="29" y="88" width="44" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Name:" id="jrN-aO-FCm">
                                     <font key="font" metaFont="systemMedium" size="13"/>
@@ -1611,7 +1612,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" misplaced="YES" textCompletion="NO" id="VEY-SJ-d0j">
-                                <rect key="frame" x="77" y="50" width="205" height="22"/>
+                                <rect key="frame" x="77" y="85" width="205" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" title="SPKBookmarkSiteName" placeholderString="" bezelStyle="round" id="cXF-Uj-ECj">
                                     <font key="font" metaFont="cellTitle"/>
@@ -1620,7 +1621,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" misplaced="YES" id="1RD-AT-nF1">
-                                <rect key="frame" x="225" y="18" width="57" height="25"/>
+                                <rect key="frame" x="225" y="29" width="57" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="roundTextured" title="Create" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hr4-YS-ezQ">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1631,7 +1632,7 @@ Gw
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" misplaced="YES" id="AOj-Ge-lyS">
-                                <rect key="frame" x="160" y="18" width="57" height="25"/>
+                                <rect key="frame" x="160" y="29" width="57" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="roundTextured" title="Cancel" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VgA-yg-Odv">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1641,6 +1642,15 @@ Gw
                                     <action selector="cancelBookmarkCreation:" target="Voe-Tx-rLC" id="uK5-A7-hcr"/>
                                 </connections>
                             </button>
+                            <textField verticalHuggingPriority="750" misplaced="YES" textCompletion="NO" id="3Wp-9I-oiT">
+                                <rect key="frame" x="75" y="65" width="205" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" alignment="left" title="https://www.google.com/" placeholderString="" id="Ari-UZ-byq">
+                                    <font key="font" metaFont="system" size="11"/>
+                                    <color key="textColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </customView>
                     <button toolTip="Bookmark this page" verticalHuggingPriority="750" misplaced="YES" id="eie-eg-Awo">
