@@ -12,15 +12,15 @@
 		AB04FD0C1C712BDB00F08232 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB04FD0A1C712BDB00F08232 /* main.m */; };
 		AB04FD131C712C6000F08232 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB04FD111C712C6000F08232 /* MainMenu.xib */; };
 		AB2B75261E86FC1C0021A2C8 /* SPKBookmarkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2B75251E86FC1C0021A2C8 /* SPKBookmarkHandler.m */; };
+		AB47C757209F307200FD1728 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB47C754209F306500FD1728 /* Sparkle.framework */; };
+		AB47C758209F307200FD1728 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB47C754209F306500FD1728 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AB47C759209F307E00FD1728 /* Sparkle.framework in Resources */ = {isa = PBXBuildFile; fileRef = AB47C754209F306500FD1728 /* Sparkle.framework */; };
 		AB52BAA31EF0EB7E0082C5E9 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB83983B19817E15001D31B7 /* WebKit.framework */; };
 		AB52BAA41EF0EB8D0082C5E9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB83980719817D8E001D31B7 /* Cocoa.framework */; };
 		AB52BAA51EF0EBE90082C5E9 /* WebKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB83983B19817E15001D31B7 /* WebKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AB52BAA61EF0EBED0082C5E9 /* Cocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB83980719817D8E001D31B7 /* Cocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AB8587B71D7C9DFE0073515C /* SparkIcon256.png in Resources */ = {isa = PBXBuildFile; fileRef = AB8587B61D7C9DFE0073515C /* SparkIcon256.png */; };
 		ABA41D9F1D84DC2300F01B90 /* NSUserDefaults+ColorSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA41D9E1D84DC2300F01B90 /* NSUserDefaults+ColorSupport.m */; };
-		ABB01BD8205B320200013616 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB01BD4205B31E400013616 /* Sparkle.framework */; };
-		ABB01BD9205B320200013616 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABB01BD4205B31E400013616 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		ABB01BDA205B320900013616 /* Sparkle.framework in Resources */ = {isa = PBXBuildFile; fileRef = ABB01BD4205B31E400013616 /* Sparkle.framework */; };
 		ABB443631D84634C001D55C7 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = ABB443621D84634C001D55C7 /* dsa_pub.pem */; };
 		ABE2C6FB1E22E500005CE2C3 /* bootstrap.min.js in Resources */ = {isa = PBXBuildFile; fileRef = ABE2C6F91E22E500005CE2C3 /* bootstrap.min.js */; };
 		ABE2C6FC1E22E500005CE2C3 /* jquery.min.js in Resources */ = {isa = PBXBuildFile; fileRef = ABE2C6FA1E22E500005CE2C3 /* jquery.min.js */; };
@@ -50,7 +50,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				AB52BAA61EF0EBED0082C5E9 /* Cocoa.framework in Embed Frameworks */,
-				ABB01BD9205B320200013616 /* Sparkle.framework in Embed Frameworks */,
+				AB47C758209F307200FD1728 /* Sparkle.framework in Embed Frameworks */,
 				AB52BAA51EF0EBE90082C5E9 /* WebKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -73,6 +73,7 @@
 		AB46C3641E930A30009F9BE0 /* Screenshot3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot3.png; sourceTree = "<group>"; };
 		AB46C3651E930A30009F9BE0 /* Screenshot4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot4.png; sourceTree = "<group>"; };
 		AB46C3661E930A30009F9BE0 /* Screenshot5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot5.png; sourceTree = "<group>"; };
+		AB47C754209F306500FD1728 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = SparkWebBrowser/Sparkle.framework; sourceTree = SOURCE_ROOT; };
 		AB83980419817D8E001D31B7 /* Spark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB83980719817D8E001D31B7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		AB83980A19817D8E001D31B7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -82,10 +83,10 @@
 		AB83983B19817E15001D31B7 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		AB8587B61D7C9DFE0073515C /* SparkIcon256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SparkIcon256.png; path = SparkWebBrowser/Images.xcassets/AppIcon256.imageset/SparkIcon256.png; sourceTree = SOURCE_ROOT; };
 		AB8DEB1C1F1979360037CB89 /* SPKGlobalStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SPKGlobalStrings.h; path = SparkWebBrowser/SPKGlobalStrings.h; sourceTree = SOURCE_ROOT; };
+		AB9CC3A2209F2FB400D7F405 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = "/Users/Jonathan/Desktop/Desktop Files/Xcode/Mac/SparkWebBrowser/Sparkle.framework"; sourceTree = "<absolute>"; };
 		ABA41D9D1D84DC2300F01B90 /* NSUserDefaults+ColorSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+ColorSupport.h"; path = "SparkWebBrowser/NSUserDefaults+ColorSupport.h"; sourceTree = SOURCE_ROOT; };
 		ABA41D9E1D84DC2300F01B90 /* NSUserDefaults+ColorSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSUserDefaults+ColorSupport.m"; path = "SparkWebBrowser/NSUserDefaults+ColorSupport.m"; sourceTree = SOURCE_ROOT; };
 		ABA872E11D7FA4140062EC6C /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
-		ABB01BD4205B31E400013616 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = SparkWebBrowser/Sparkle.framework; sourceTree = SOURCE_ROOT; };
 		ABB443621D84634C001D55C7 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = SOURCE_ROOT; };
 		ABBD6C101D3706B500C48592 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = "../../../../../Downloads/Sparkle-1.14.0/Sparkle.framework"; sourceTree = "<group>"; };
 		ABE2C6F91E22E500005CE2C3 /* bootstrap.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = bootstrap.min.js; path = "SparkWebBrowser/URL Resources/bootstrap.min.js"; sourceTree = SOURCE_ROOT; };
@@ -116,7 +117,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB52BAA41EF0EB8D0082C5E9 /* Cocoa.framework in Frameworks */,
-				ABB01BD8205B320200013616 /* Sparkle.framework in Frameworks */,
+				AB47C757209F307200FD1728 /* Sparkle.framework in Frameworks */,
 				AB52BAA31EF0EB7E0082C5E9 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,6 +125,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB47C756209F306D00FD1728 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				AB9CC3A2209F2FB400D7F405 /* Sparkle.framework */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		AB8397FB19817D8D001D31B7 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +142,7 @@
 				AB83980619817D8E001D31B7 /* Frameworks */,
 				AB83980519817D8E001D31B7 /* Products */,
 				ABBA53E81D85E0BE00D3B691 /* URL Resources */,
+				AB47C756209F306D00FD1728 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -206,7 +216,7 @@
 		ABA41DA51D84E40600F01B90 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ABB01BD4205B31E400013616 /* Sparkle.framework */,
+				AB47C754209F306500FD1728 /* Sparkle.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -304,6 +314,7 @@
 				AB83980119817D8E001D31B7 /* Frameworks */,
 				AB83980219817D8E001D31B7 /* Resources */,
 				ABBD6C1B1D37078100C48592 /* Embed Frameworks */,
+				AB9CC3A1209F2EF000D7F405 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -320,7 +331,7 @@
 		AB8397FC19817D8D001D31B7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Insleep;
 				TargetAttributes = {
 					AB83980319817D8E001D31B7 = {
@@ -352,7 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABB01BDA205B320900013616 /* Sparkle.framework in Resources */,
+				AB47C759209F307E00FD1728 /* Sparkle.framework in Resources */,
 				ABE2C7161E22E524005CE2C3 /* spark-redirect-loop.html in Resources */,
 				ABE2C7171E22E524005CE2C3 /* spark-urls.html in Resources */,
 				AB04FD021C712BAD00F08232 /* Images.xcassets in Resources */,
@@ -377,6 +388,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AB9CC3A1209F2EF000D7F405 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AB83980019817D8E001D31B7 /* Sources */ = {
@@ -418,12 +445,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -472,12 +501,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
