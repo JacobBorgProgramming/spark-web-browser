@@ -22,6 +22,7 @@
 		AB8587B71D7C9DFE0073515C /* SparkIcon256.png in Resources */ = {isa = PBXBuildFile; fileRef = AB8587B61D7C9DFE0073515C /* SparkIcon256.png */; };
 		ABA41D9F1D84DC2300F01B90 /* NSUserDefaults+ColorSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA41D9E1D84DC2300F01B90 /* NSUserDefaults+ColorSupport.m */; };
 		ABB443631D84634C001D55C7 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = ABB443621D84634C001D55C7 /* dsa_pub.pem */; };
+		ABC57A9920C63309002BEBDE /* SparkIcon128.png in Resources */ = {isa = PBXBuildFile; fileRef = ABC57A9820C63308002BEBDE /* SparkIcon128.png */; };
 		ABE2C6FB1E22E500005CE2C3 /* bootstrap.min.js in Resources */ = {isa = PBXBuildFile; fileRef = ABE2C6F91E22E500005CE2C3 /* bootstrap.min.js */; };
 		ABE2C6FC1E22E500005CE2C3 /* jquery.min.js in Resources */ = {isa = PBXBuildFile; fileRef = ABE2C6FA1E22E500005CE2C3 /* jquery.min.js */; };
 		ABE2C6FE1E22E506005CE2C3 /* bootstrap.min.css in Resources */ = {isa = PBXBuildFile; fileRef = ABE2C6FD1E22E506005CE2C3 /* bootstrap.min.css */; };
@@ -89,6 +90,7 @@
 		ABA872E11D7FA4140062EC6C /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		ABB443621D84634C001D55C7 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = SOURCE_ROOT; };
 		ABBD6C101D3706B500C48592 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = "../../../../../Downloads/Sparkle-1.14.0/Sparkle.framework"; sourceTree = "<group>"; };
+		ABC57A9820C63308002BEBDE /* SparkIcon128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SparkIcon128.png; path = SparkWebBrowser/Images.xcassets/AppIcon256.imageset/SparkIcon128.png; sourceTree = SOURCE_ROOT; };
 		ABE2C6F91E22E500005CE2C3 /* bootstrap.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = bootstrap.min.js; path = "SparkWebBrowser/URL Resources/bootstrap.min.js"; sourceTree = SOURCE_ROOT; };
 		ABE2C6FA1E22E500005CE2C3 /* jquery.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = jquery.min.js; path = "SparkWebBrowser/URL Resources/jquery.min.js"; sourceTree = SOURCE_ROOT; };
 		ABE2C6FD1E22E506005CE2C3 /* bootstrap.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = bootstrap.min.css; path = "SparkWebBrowser/URL Resources/bootstrap.min.css"; sourceTree = SOURCE_ROOT; };
@@ -268,6 +270,7 @@
 		ABAC7A781DB325420087FF6B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				ABC57A9820C63308002BEBDE /* SparkIcon128.png */,
 				AB8587B61D7C9DFE0073515C /* SparkIcon256.png */,
 				ABE2C6FF1E22E50E005CE2C3 /* ErrorIcon256.png */,
 				ABE2C7001E22E50E005CE2C3 /* InternetDisconnected.png */,
@@ -363,6 +366,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABC57A9920C63309002BEBDE /* SparkIcon128.png in Resources */,
 				AB47C759209F307E00FD1728 /* Sparkle.framework in Resources */,
 				ABE2C7161E22E524005CE2C3 /* spark-redirect-loop.html in Resources */,
 				ABE2C7171E22E524005CE2C3 /* spark-urls.html in Resources */,
@@ -392,7 +396,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		AB9CC3A1209F2EF000D7F405 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -401,7 +405,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

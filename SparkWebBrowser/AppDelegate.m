@@ -126,7 +126,6 @@ extern NSString *genericErrorTitle;
 extern NSString *cancelButtonText;
 
 /* Theme colors */
-NSColor *defaultColor = nil;
 NSColor *rubyRedColor = nil;
 NSColor *deepAquaColor = nil;
 NSColor *midnightBlueColor = nil;
@@ -177,7 +176,6 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
     defaults = [NSUserDefaults standardUserDefaults]; // Set up NSUserDefaults
     
     // Set up theme colors
-    defaultColor = [NSColor colorWithRed:192.0f/255.0f green:192.0f/255.0f blue:192.0f/255.0f alpha:1.0f];
     rubyRedColor = [NSColor colorWithRed:0.773f green:0.231f blue:0.212f alpha:1.0f];
     deepAquaColor = [NSColor colorWithRed:46.0f/255.0f green:133.0f/255.0f blue:162.0f/255.0f alpha:1.0f];
     midnightBlueColor = [NSColor colorWithRed:26.0f/255.0f green:68.0f/255.0f blue:97.0f/255.0f alpha:1.0f];
@@ -452,15 +450,16 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
     // Set version/build strings
     self.currentVersion.stringValue = [NSString stringWithFormat:@"Version %@.%@", appVersionString, appBuildString];
     self.currentReleaseChannel.stringValue = [NSString stringWithFormat:@"%@ release channel", [releaseChannel capitalizedString]];
+    self.settingsVersionBuildText.stringValue = [NSString stringWithFormat:@"%@.%@", appVersionString, appBuildString];
 
-    // Window setup
-    self.aboutWindow.backgroundColor = [NSColor whiteColor];
+    // Window setup -- commented out to fix issues on macOS 10.14 Mojave
+    /*self.aboutWindow.backgroundColor = [NSColor whiteColor];
     self.errorWindow.backgroundColor = [NSColor whiteColor];
     self.popupWindow.backgroundColor = [NSColor whiteColor];
     self.settingsWindow.backgroundColor = [NSColor whiteColor];
     self.configWindow.backgroundColor = [NSColor whiteColor];
     self.historyWindow.backgroundColor = [NSColor whiteColor];
-    self.clearBrowsingDataWindow.backgroundColor = [NSColor whiteColor];
+    self.clearBrowsingDataWindow.backgroundColor = [NSColor whiteColor];*/
     
     self.window.titlebarAppearsTransparent = YES;
     self.aboutWindow.titlebarAppearsTransparent = YES;
@@ -488,6 +487,10 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
     self.configWindow.titleVisibility = NSWindowTitleHidden;
     self.historyWindow.titleVisibility = NSWindowTitleHidden;
     self.clearBrowsingDataWindow.titleVisibility = NSWindowTitleHidden;
+    
+    if([[NSProcessInfo processInfo] operatingSystemVersion].minorVersion == 14) { // Check whether or not user is running macOS 10.14 Mojave
+        self.mojaveAppearanceText.hidden = NO; // Display appearance message
+    }
     
     currentBookmarkTitlesArray = [defaults objectForKey:@"storedBookmarkTitlesArray"];
     currentBookmarkIconsArray = [defaults objectForKey:@"storedBookmarkIconsArray"];
@@ -538,7 +541,7 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
         self.customColorWell.hidden = YES;
         
         // Set window color to default color
-        self.window.backgroundColor = defaultColor;
+        self.window.backgroundColor = [NSColor windowBackgroundColor];
         
         // Still set color in NSColorWell in case user wants it later
         self.customColorWell.color = [defaults colorForKey:@"customColor"];
@@ -801,6 +804,18 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
     }
 }
 
+- (IBAction)showVersionBuildPrefs:(id)sender {
+    if(self.setPrefsVersionBuildNumberBtn.state == NSOnState) {
+        NSLog(@"Now showing version/build numbers in Preferences.");
+        [defaults setBool:YES forKey:@"preferencesVersionBuildNumberEnabled"];
+        self.settingsVersionBuildText.hidden = NO;
+    } else {
+        NSLog(@"No longer showing version/build numbers in Preferences.");
+        [defaults setBool:NO forKey:@"preferencesVersionBuildNumberEnabled"];
+        self.settingsVersionBuildText.hidden = YES;
+    }
+}
+
 - (IBAction)addBookmark:(id)sender {
     self.bookmarkAddedName.stringValue = [NSString stringWithFormat:@"%@", self.webView.mainFrameTitle];
     
@@ -913,7 +928,7 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
         self.customColorWell.hidden = YES;
         
         // Set window color to default color
-        self.window.backgroundColor = defaultColor;
+        self.window.backgroundColor = [NSColor windowBackgroundColor];
         
         // Still store color in NSColorWell in case user wants it later
         [defaults setColor:self.customColorWell.color forKey:@"customColor"];
@@ -1108,7 +1123,7 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
 
 - (IBAction)initWebpageLoad:(id)sender {
     
-    [self.addressBar setTextColor:[NSColor blackColor]];
+    [self.addressBar setTextColor:[NSColor labelColor]]; // Fix for Mojave dark mode
     
     candidateURL = [NSURL URLWithString:self.addressBar.stringValue]; // String value of addressBar converted to an NSURL
     
@@ -1471,6 +1486,19 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
         [defaults setBool:NO forKey:@"loadStatusIndicatorEnabled"];
     }
     
+    if([defaults objectForKey:@"preferencesVersionBuildNumberEnabled"] == nil) {
+        [defaults setBool:NO forKey:@"preferencesVersionBuildNumberEnabled"];
+    }
+    
+    // Check if checkbox should be checked (setPrefsVersionBuildNumberBtn)
+    if([defaults boolForKey:@"preferencesVersionBuildNumberEnabled"] == YES) {
+        self.setPrefsVersionBuildNumberBtn.state = NSOnState;
+        self.settingsVersionBuildText.hidden = NO;
+    } else {
+        self.setPrefsVersionBuildNumberBtn.state = NSOffState;
+        self.settingsVersionBuildText.hidden = YES;
+    }
+    
     // Check if checkbox should be checked (spark://config - "Use spark://about webpage")
     if([defaults boolForKey:@"useSparkAboutPage"] == YES) {
         self.useAboutPageBtn.state = NSOnState;
@@ -1806,6 +1834,8 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
 - (void)mouseEntered:(NSEvent *)theEvent {
     // Mouse entered tracking area
     
+    // The following code is broken on 10.14 Mojave (18A293u)
+    
     if([[theEvent trackingArea] isEqual:backBtnTrackingArea]) {
         [[self.backBtn cell] setBackgroundColor:[NSColor colorWithRed:230.0f/255.0f green:230.0f/255.0f blue:230.0f/255.0f alpha:1.0f]];
     } else if([[theEvent trackingArea] isEqual:forwardBtnTrackingArea]) {
@@ -1825,16 +1855,18 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
 - (void)mouseExited:(NSEvent *)theEvent {
     // Mouse exited tracking area
     
+    // The following code is broken on 10.14 Mojave (18A293u)
+    
     if([[theEvent trackingArea] isEqual:backBtnTrackingArea]) {
-        [[self.backBtn cell] setBackgroundColor:[NSColor whiteColor]];
+        [[self.backBtn cell] setBackgroundColor:[NSColor labelColor]];
     } else if([[theEvent trackingArea] isEqual:forwardBtnTrackingArea]) {
-        [[self.forwardBtn cell] setBackgroundColor:[NSColor whiteColor]];
+        [[self.forwardBtn cell] setBackgroundColor:[NSColor labelColor]];
     } else if([[theEvent trackingArea] isEqual:reloadBtnTrackingArea]) {
-        [[self.reloadBtn cell] setBackgroundColor:[NSColor whiteColor]];
+        [[self.reloadBtn cell] setBackgroundColor:[NSColor labelColor]];
     } else if([[theEvent trackingArea] isEqual:homeBtnTrackingArea]) {
-        [[self.homeBtn cell] setBackgroundColor:[NSColor whiteColor]];
+        [[self.homeBtn cell] setBackgroundColor:[NSColor labelColor]];
     } else if([[theEvent trackingArea] isEqual:settingsBtnTrackingArea]) {
-        [[self.settingsBtn cell] setBackgroundColor:[NSColor whiteColor]];
+        [[self.settingsBtn cell] setBackgroundColor:[NSColor labelColor]];
     } else if([[theEvent trackingArea] isEqual:sparkSecurePageViewTrackingArea]) {
         self.sparkSecurePageView.hidden = YES;
     }
@@ -2170,9 +2202,9 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
         } else if([self.addressBar.stringValue hasPrefix:@"spark://"] && [defaults boolForKey:@"insecureHTTPSOverride"] != YES) {
             self.pageStatusImage.hidden = NO;
             self.pageStatusImage.image = [NSImage imageNamed:NSImageNameMenuOnStateTemplate];
-            self.sparkSecurePageIcon.image = [NSImage imageNamed:@"SparkIcon256"];
+            self.sparkSecurePageIcon.image = [NSImage imageNamed:@"SparkIcon128"];
             self.sparkSecurePageText.stringValue = secureSparkPageText;
-            self.sparkSecurePageText.textColor = [NSColor blackColor];
+            self.sparkSecurePageText.textColor = [NSColor labelColor]; // 10.14 Mojave fix
             self.sparkSecurePageDetailText.stringValue = secureSparkPageDetailText;
         } else if([self.addressBar.stringValue hasPrefix:@"http://"] || [self.addressBar.stringValue hasPrefix:@"file://"]) {
             self.pageStatusImage.hidden = YES;
@@ -2193,7 +2225,7 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
         }
         
         if([defaults boolForKey:@"insecureHTTPSOverride"] == NO) {
-            [self.addressBar setTextColor:[NSColor blackColor]];
+            [self.addressBar setTextColor:[NSColor labelColor]]; // Fix for Mojave dark mode
         }
         
         // Set actual page URL if the HTTPS override is inactive and we are not viewing a spark:// page
@@ -2243,8 +2275,6 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
     }
 }
 
-
-
 - (void)webView:(WebView *)sender mouseDidMoveOverElement:(NSDictionary *)elementInformation modifierFlags:(NSUInteger)modifierFlags {
     NSArray *keys = [elementInformation objectForKey:WebElementLinkURLKey];
     
@@ -2259,7 +2289,6 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
     }
 
 }
-
 
 - (void)webView:(WebView *)sender didReceiveTitle:(NSString *)title forFrame:(WebFrame *)frame {
     

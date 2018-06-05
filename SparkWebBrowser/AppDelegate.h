@@ -86,6 +86,9 @@
 @property (assign, nonatomic) IBOutlet NSButton *clearBrowsingData_bookmarksToggle;
 @property (assign, nonatomic) IBOutlet NSButton *clearBrowsingDataConfirmBtn;
 @property (assign, nonatomic) IBOutlet NSMenuItem *privateBrowsingModeToggle;
+@property (assign, nonatomic) IBOutlet NSTextField *mojaveAppearanceText;
+@property (assign, nonatomic) IBOutlet NSTextField *settingsVersionBuildText;
+@property (assign, nonatomic) IBOutlet NSButton *setPrefsVersionBuildNumberBtn;
 
 #pragma mark - Miscellaneous properties
 @property (nonatomic, assign) long bytesReceived;
@@ -223,6 +226,12 @@
  * @param sender
  */
 - (IBAction)enableLoadStatusIndicator:(id)sender;
+
+/**
+ * Show the version and build numbers in Preferences.
+ * @param sender
+ */
+- (IBAction)showVersionBuildPrefs:(id)sender;
 
 /**
  * Add a bookmark to the bookmarks array.

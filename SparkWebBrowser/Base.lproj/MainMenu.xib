@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="13771"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14269.12"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="14269.12"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -61,6 +60,7 @@
                 <outlet property="loadStatusIndicatorText" destination="GOI-gg-OmB" id="fTJ-Nm-BOX"/>
                 <outlet property="loadingIndicator" destination="1qB-mY-4UE" id="EYD-he-pSG"/>
                 <outlet property="menuBarBookmarks" destination="drg-vE-MEd" id="I0Z-VL-A66"/>
+                <outlet property="mojaveAppearanceText" destination="ccH-25-zj7" id="cFb-jJ-Nib"/>
                 <outlet property="ntBtn" destination="pmy-Gn-uac" id="eJG-ga-1rU"/>
                 <outlet property="ntBtnBackground" destination="VRX-Sp-sir" id="uAL-Ad-2Pe"/>
                 <outlet property="ntNotSupported" destination="e3k-CE-CDi" id="JB0-P4-EAc"/>
@@ -75,8 +75,10 @@
                 <outlet property="reloadBtn" destination="gZC-HQ-A14" id="jGE-yL-ojT"/>
                 <outlet property="searchEnginePicker" destination="GYw-Eq-qx7" id="whS-kR-ROu"/>
                 <outlet property="setHomepageBtn" destination="UmC-Hu-U0Q" id="W7C-5d-ciQ"/>
+                <outlet property="setPrefsVersionBuildNumberBtn" destination="4DU-vE-OUD" id="wai-AX-Xx1"/>
                 <outlet property="settingsBtn" destination="Nsh-fL-8Ic" id="c7u-0x-cPE"/>
                 <outlet property="settingsPopupBtn" destination="vH7-Li-e10" id="uXS-4j-fNl"/>
+                <outlet property="settingsVersionBuildText" destination="GWo-My-rs5" id="gxF-Kp-Lcz"/>
                 <outlet property="settingsWindow" destination="MMA-4M-Pa4" id="6F0-cu-izG"/>
                 <outlet property="showHomeBtn" destination="Mxh-Tp-E98" id="8Y7-n0-qDg"/>
                 <outlet property="sparkSecurePageDetailText" destination="smS-Rv-SjS" id="864-LM-mga"/>
@@ -516,7 +518,7 @@
             </items>
             <point key="canvasLocation" x="944" y="-736"/>
         </menu>
-        <window title="About Spark" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="oJi-1c-Sb5" customClass="NSPanel">
+        <window title="About Spark" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="oJi-1c-Sb5" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="644" y="458" width="317" height="232"/>
@@ -533,7 +535,7 @@
                             <string key="title">Copyright © 2014-2018 Insleep. All rights reserved.
 Spark is made possible by the WebKit open source project and other open source software.
 </string>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -595,7 +597,7 @@ Spark is made possible by the WebKit open source project and other open source s
             </view>
             <point key="canvasLocation" x="943.5" y="-537"/>
         </window>
-        <window title="Clear Browsing Data" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="Ij2-1D-TQJ" customClass="NSPanel">
+        <window title="Clear Browsing Data" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="Ij2-1D-TQJ" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="644" y="458" width="381" height="190"/>
@@ -678,7 +680,7 @@ Gw
             </view>
             <point key="canvasLocation" x="1453.5" y="-806"/>
         </window>
-        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="MMA-4M-Pa4" userLabel="Preferences Window" customClass="NSPanel">
+        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="MMA-4M-Pa4" userLabel="Preferences Window" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="429" y="202" width="614" height="297"/>
@@ -740,7 +742,7 @@ Gw
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" placeholderString="e.g. https://www.google.com" drawsBackground="YES" id="9f4-ku-MaX">
                                                 <font key="font" metaFont="cellTitle"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <connections>
@@ -785,7 +787,7 @@ Gw
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="This setting requires a restart to take full effect." id="aCC-eG-e4I">
                                                 <font key="font" metaFont="system" size="10"/>
-                                                <color key="textColor" red="0.33004838199999997" green="0.33004838199999997" blue="0.33004838199999997" alpha="0.93430543659999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
@@ -895,7 +897,7 @@ Gw
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="URL with %@ in place of query" drawsBackground="YES" id="beZ-Fk-jh7">
                                                 <font key="font" metaFont="cellTitle"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <connections>
@@ -926,7 +928,7 @@ Gw
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" allowsUndo="NO" state="on" borderStyle="bezel" placeholderString="SPKDownloadLocation" drawsBackground="YES" id="ia2-zH-dOh">
                                                 <font key="font" metaFont="cellTitle"/>
-                                                <color key="textColor" red="0.34577252538071068" green="0.34577252538071068" blue="0.34577252538071068" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
@@ -1055,7 +1057,16 @@ Gw
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Select one of the pre-defined themes, or create a custom one." id="e66-mJ-XGc">
                                                 <font key="font" metaFont="system" size="10"/>
-                                                <color key="textColor" red="0.33004838197969544" green="0.33004838197969544" blue="0.33004838197969544" alpha="0.93430543664383559" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" allowsCharacterPickerTouchBarItem="YES" id="ccH-25-zj7">
+                                            <rect key="frame" x="15" y="59" width="310" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Spark automatically adjusts some aspects of its interface based on your appearance preferences in macOS 10.14 Mojave." id="yLz-oN-ydh">
+                                                <font key="font" metaFont="system" size="10"/>
+                                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
@@ -1120,7 +1131,7 @@ Gw
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Restore all settings to their original defaults." id="Bn9-ry-U2f">
                                                 <font key="font" metaFont="system" size="10"/>
-                                                <color key="textColor" red="0.33004838199999997" green="0.33004838199999997" blue="0.33004838199999997" alpha="0.93430543659999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
@@ -1140,35 +1151,44 @@ Gw
                             </tabViewItem>
                         </tabViewItems>
                     </tabView>
+                    <textField hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" allowsCharacterPickerTouchBarItem="YES" id="GWo-My-rs5">
+                        <rect key="frame" x="499" y="1" width="115" height="13"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="SPKVersion (SPKBuild)" id="Udl-kO-tBR">
+                            <font key="font" metaFont="system" size="10"/>
+                            <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
             <point key="canvasLocation" x="1470" y="-481.5"/>
         </window>
-        <window title="Configuration" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="qp2-Mq-gTe" userLabel="Config Window" customClass="NSPanel">
+        <window title="Configuration" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="qp2-Mq-gTe" userLabel="Config Window" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="577" y="497" width="525" height="193"/>
+            <rect key="contentRect" x="577" y="497" width="525" height="213"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" misplaced="YES" id="ElD-p4-mUE">
-                <rect key="frame" x="0.0" y="0.0" width="525" height="193"/>
+                <rect key="frame" x="0.0" y="0.0" width="525" height="213"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <box verticalHuggingPriority="750" misplaced="YES" boxType="separator" id="Qtq-Mj-oqy">
-                        <rect key="frame" x="20" y="69" width="485" height="5"/>
+                        <rect key="frame" x="20" y="89" width="485" height="5"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </box>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" allowsCharacterPickerTouchBarItem="YES" id="3Kt-xI-ELp">
-                        <rect key="frame" x="18" y="80" width="489" height="52"/>
+                        <rect key="frame" x="18" y="100" width="489" height="52"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" id="gRr-nC-ra9">
                             <font key="font" metaFont="system" size="10"/>
                             <string key="title">                  These experimental features may change, break, or disappear at any time. There are absolutely no guarantees about what may happen if you turn one of these experiments on, and your browser may delete all your data, or your security and privacy could be compromised in unexpected ways. Please proceed with caution.</string>
-                            <color key="textColor" red="0.33004838199999997" green="0.33004838199999997" blue="0.33004838199999997" alpha="0.93430543659999998" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" allowsCharacterPickerTouchBarItem="YES" id="era-qZ-wuw">
-                        <rect key="frame" x="18" y="119" width="56" height="13"/>
+                        <rect key="frame" x="18" y="139" width="56" height="13"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="WARNING:" id="0UG-IT-dn5">
                             <font key="font" metaFont="system" size="10"/>
@@ -1177,7 +1197,7 @@ Gw
                         </textFieldCell>
                     </textField>
                     <button misplaced="YES" id="Dsd-aD-fO0">
-                        <rect key="frame" x="18" y="38" width="189" height="18"/>
+                        <rect key="frame" x="18" y="58" width="189" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Use spark://about webpage" bezelStyle="regularSquare" imagePosition="left" inset="2" id="tSd-Uk-uIG">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -1188,7 +1208,7 @@ Gw
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="YES" id="Wuz-PX-SMz">
-                        <rect key="frame" x="73" y="147" width="168" height="33"/>
+                        <rect key="frame" x="73" y="167" width="168" height="33"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Configuration" id="cWD-g8-44W">
                             <font key="font" metaFont="systemMedium" size="27"/>
@@ -1197,12 +1217,12 @@ Gw
                         </textFieldCell>
                     </textField>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="5ax-wd-HiW">
-                        <rect key="frame" x="20" y="140" width="47" height="47"/>
+                        <rect key="frame" x="20" y="160" width="47" height="47"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="AppIcon256" id="Ggz-Tf-jA4"/>
                     </imageView>
                     <button misplaced="YES" id="RpU-iM-YnY">
-                        <rect key="frame" x="18" y="18" width="224" height="18"/>
+                        <rect key="frame" x="18" y="38" width="224" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Enable page load status indicator" bezelStyle="regularSquare" imagePosition="left" inset="2" id="loa-t6-5eS">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -1212,11 +1232,22 @@ Gw
                             <action selector="enableLoadStatusIndicator:" target="Voe-Tx-rLC" id="QBr-0M-gjq"/>
                         </connections>
                     </button>
+                    <button misplaced="YES" id="4DU-vE-OUD">
+                        <rect key="frame" x="18" y="18" width="284" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Show version/build numbers in Preferences" bezelStyle="regularSquare" imagePosition="left" inset="2" id="uZb-aP-6tu">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showVersionBuildPrefs:" target="Voe-Tx-rLC" id="MzV-p4-Jkq"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="839.5" y="-901.5"/>
+            <point key="canvasLocation" x="839.5" y="-919.5"/>
         </window>
-        <window allowsToolTipsWhenApplicationIsInactive="NO" showsToolbarButton="NO" frameAutosaveName="" animationBehavior="default" id="QvC-M9-y7g">
+        <window allowsToolTipsWhenApplicationIsInactive="NO" frameAutosaveName="" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -1275,7 +1306,7 @@ Gw
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" title="https://" placeholderString="" bezelStyle="round" id="MSe-fD-WSx">
                             <font key="font" metaFont="cellTitle"/>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
@@ -1457,7 +1488,7 @@ Gw
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" drawsBackground="YES" id="27d-62-N4n">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" red="0.8708558058375635" green="0.8708558058375635" blue="0.8708558058375635" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="unemphasizedSelectedContentBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <progressIndicator wantsLayer="YES" maxValue="100" style="spinning" id="DMz-UI-kVs">
@@ -1481,7 +1512,7 @@ Gw
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Downloading file..." id="Hyg-2o-nCp">
                                     <font key="font" metaFont="systemMedium" size="13"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" id="dwf-zl-wLW">
@@ -1489,7 +1520,7 @@ Gw
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Zero KB/Zero KB" id="dTj-TK-3Op">
                                     <font key="font" metaFont="smallSystem"/>
-                                    <color key="textColor" red="0.46270225253807107" green="0.46270225253807107" blue="0.46270225253807107" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -1520,7 +1551,7 @@ Gw
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" drawsBackground="YES" id="Igf-fF-DKK">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" white="1" alpha="0.80367080479452058" colorSpace="deviceWhite"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <button toolTip="Open a new tab" verticalHuggingPriority="750" misplaced="YES" id="pmy-Gn-uac">
@@ -1567,7 +1598,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" id="DD3-2h-Xt5">
-                                <rect key="frame" x="46" y="58" width="259" height="17"/>
+                                <rect key="frame" x="49" y="58" width="253" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="SPKSecurePageIndicatorText" id="O0K-0g-7th">
                                     <font key="font" metaFont="systemMedium" size="13"/>
@@ -1616,7 +1647,7 @@ Gw
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" title="SPKBookmarkSiteName" placeholderString="" drawsBackground="YES" id="cXF-Uj-ECj">
                                     <font key="font" metaFont="cellTitle"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -1645,9 +1676,9 @@ Gw
                             <textField verticalHuggingPriority="750" misplaced="YES" textCompletion="NO" id="3Wp-9I-oiT">
                                 <rect key="frame" x="75" y="65" width="205" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" alignment="left" title="https://www.google.com/" placeholderString="" id="Ari-UZ-byq">
-                                    <font key="font" metaFont="system" size="11"/>
-                                    <color key="textColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" alignment="left" title="https://www.google.com/" placeholderString="" id="Ari-UZ-byq">
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -1695,7 +1726,7 @@ Gw
             </view>
             <point key="canvasLocation" x="867.5" y="77"/>
         </window>
-        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="uuQ-xY-3aS" customClass="NSPanel">
+        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="uuQ-xY-3aS" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="731" y="406" width="348" height="228"/>
@@ -1718,7 +1749,7 @@ Gw
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="SPKErrorDetailText" id="gSr-ue-frb">
                             <font key="font" metaFont="system" size="16"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -1740,7 +1771,7 @@ DQ
             </view>
             <point key="canvasLocation" x="340" y="-891"/>
         </window>
-        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="mqa-o5-dlu" customClass="NSPanel">
+        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="mqa-o5-dlu" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="731" y="446" width="391" height="254"/>
@@ -1763,7 +1794,7 @@ DQ
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="SPKPopupDetailText" id="TQE-ib-1Rc">
                             <font key="font" metaFont="system" size="16"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -1820,7 +1851,7 @@ DQ
             </items>
             <point key="canvasLocation" x="692.5" y="-348.5"/>
         </menu>
-        <window title="History" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="cZf-cc-a2l">
+        <window title="History" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="cZf-cc-a2l">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="207" width="480" height="341"/>
@@ -1864,11 +1895,11 @@ DQ
                                 </tableView>
                             </subviews>
                         </clipView>
-                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="UHK-X4-zZM">
+                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="UHK-X4-zZM">
                             <rect key="frame" x="1" y="281" width="480" height="16"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
-                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="1Dw-W1-CpU">
+                        <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="1Dw-W1-CpU">
                             <rect key="frame" x="224" y="17" width="15" height="102"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
