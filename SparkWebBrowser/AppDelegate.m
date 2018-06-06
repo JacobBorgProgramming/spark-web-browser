@@ -1858,15 +1858,15 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
     // The following code is broken on 10.14 Mojave (18A293u)
     
     if([[theEvent trackingArea] isEqual:backBtnTrackingArea]) {
-        [[self.backBtn cell] setBackgroundColor:[NSColor labelColor]];
+        [[self.backBtn cell] setBackgroundColor:[NSColor whiteColor]];
     } else if([[theEvent trackingArea] isEqual:forwardBtnTrackingArea]) {
-        [[self.forwardBtn cell] setBackgroundColor:[NSColor labelColor]];
+        [[self.forwardBtn cell] setBackgroundColor:[NSColor whiteColor]];
     } else if([[theEvent trackingArea] isEqual:reloadBtnTrackingArea]) {
-        [[self.reloadBtn cell] setBackgroundColor:[NSColor labelColor]];
+        [[self.reloadBtn cell] setBackgroundColor:[NSColor whiteColor]];
     } else if([[theEvent trackingArea] isEqual:homeBtnTrackingArea]) {
-        [[self.homeBtn cell] setBackgroundColor:[NSColor labelColor]];
+        [[self.homeBtn cell] setBackgroundColor:[NSColor whiteColor]];
     } else if([[theEvent trackingArea] isEqual:settingsBtnTrackingArea]) {
-        [[self.settingsBtn cell] setBackgroundColor:[NSColor labelColor]];
+        [[self.settingsBtn cell] setBackgroundColor:[NSColor whiteColor]];
     } else if([[theEvent trackingArea] isEqual:sparkSecurePageViewTrackingArea]) {
         self.sparkSecurePageView.hidden = YES;
     }
