@@ -1507,7 +1507,7 @@ Gw
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="YES" id="OQ0-32-CRq">
-                                <rect key="frame" x="78" y="48" width="227" height="17"/>
+                                <rect key="frame" x="78" y="48" width="319" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Downloading file..." id="Hyg-2o-nCp">
                                     <font key="font" metaFont="systemMedium" size="13"/>
