@@ -89,6 +89,7 @@
 @property (assign, nonatomic) IBOutlet NSTextField *mojaveAppearanceText;
 @property (assign, nonatomic) IBOutlet NSTextField *settingsVersionBuildText;
 @property (assign, nonatomic) IBOutlet NSButton *setPrefsVersionBuildNumberBtn;
+@property (assign, nonatomic) IBOutlet NSTouchBar *sparkTouchBar;
 
 #pragma mark - Miscellaneous properties
 @property (nonatomic, assign) long bytesReceived;

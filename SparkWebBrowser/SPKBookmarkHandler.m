@@ -30,6 +30,7 @@
             bookmarkIconData = [[NSImage imageNamed:@"SparkFavicon"] TIFFRepresentation];
         } else {
             bookmarkIconData = [bookmarkIcon TIFFRepresentation];
+            bookmarkIconData = [bookmarkIcon imageResize:bookmarkIcon, CGSizeMake(16, 16)];
         }
         
         currentBookmarksArray = [NSMutableArray array];

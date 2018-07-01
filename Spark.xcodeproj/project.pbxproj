@@ -40,6 +40,7 @@
 		ABE2C7181E22E524005CE2C3 /* spark-version.html in Resources */ = {isa = PBXBuildFile; fileRef = ABE2C70F1E22E524005CE2C3 /* spark-version.html */; };
 		ABEB97521E85D2EE006C6533 /* SPKHistoryHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEB97511E85D2EE006C6533 /* SPKHistoryHandler.m */; };
 		ABEB97611E85DCBF006C6533 /* SPKHistoryTable.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEB97601E85DCBF006C6533 /* SPKHistoryTable.m */; };
+		ABFC108120E88C72007BAD05 /* NSImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFC108020E88C72007BAD05 /* NSImage+Resize.m */; };
 		ABFEEAA31E946EAF005C9544 /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = ABFEEAA21E946EAF005C9544 /* favicon.ico */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +111,8 @@
 		ABEB97511E85D2EE006C6533 /* SPKHistoryHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPKHistoryHandler.m; path = SparkWebBrowser/SPKHistoryHandler.m; sourceTree = SOURCE_ROOT; };
 		ABEB975F1E85DCBF006C6533 /* SPKHistoryTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPKHistoryTable.h; path = SparkWebBrowser/SPKHistoryTable.h; sourceTree = SOURCE_ROOT; };
 		ABEB97601E85DCBF006C6533 /* SPKHistoryTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPKHistoryTable.m; path = SparkWebBrowser/SPKHistoryTable.m; sourceTree = SOURCE_ROOT; };
+		ABFC107F20E88C72007BAD05 /* NSImage+Resize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSImage+Resize.h"; path = "SparkWebBrowser/NSImage+Resize.h"; sourceTree = SOURCE_ROOT; };
+		ABFC108020E88C72007BAD05 /* NSImage+Resize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSImage+Resize.m"; path = "SparkWebBrowser/NSImage+Resize.m"; sourceTree = SOURCE_ROOT; };
 		ABFEEAA21E946EAF005C9544 /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,6 +196,8 @@
 				ABEB97601E85DCBF006C6533 /* SPKHistoryTable.m */,
 				ABA41D9D1D84DC2300F01B90 /* NSUserDefaults+ColorSupport.h */,
 				ABA41D9E1D84DC2300F01B90 /* NSUserDefaults+ColorSupport.m */,
+				ABFC107F20E88C72007BAD05 /* NSImage+Resize.h */,
+				ABFC108020E88C72007BAD05 /* NSImage+Resize.m */,
 				AB04FD111C712C6000F08232 /* MainMenu.xib */,
 				AB04FD011C712BAD00F08232 /* Images.xcassets */,
 				AB83980E19817D8E001D31B7 /* Supporting Files */,
@@ -417,6 +422,7 @@
 				ABEB97521E85D2EE006C6533 /* SPKHistoryHandler.m in Sources */,
 				ABA41D9F1D84DC2300F01B90 /* NSUserDefaults+ColorSupport.m in Sources */,
 				ABEB97611E85DCBF006C6533 /* SPKHistoryTable.m in Sources */,
+				ABFC108120E88C72007BAD05 /* NSImage+Resize.m in Sources */,
 				AB2B75261E86FC1C0021A2C8 /* SPKBookmarkHandler.m in Sources */,
 				AB04FD0C1C712BDB00F08232 /* main.m in Sources */,
 				AB04FD051C712BB500F08232 /* AppDelegate.m in Sources */,

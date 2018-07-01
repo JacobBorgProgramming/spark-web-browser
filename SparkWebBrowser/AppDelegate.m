@@ -236,7 +236,13 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
     // NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
     // [defaults removePersistentDomainForName:appDomain];
     
-    NSApplication.shared().isAutomaticCustomizeTouchBarMenuItemEnabled = true
+    //NSApplication.shared().isAutomaticCustomizeTouchBarMenuItemEnabled = true
+    
+    // Set up Touch Bar
+    [NSApplication sharedApplication].automaticCustomizeTouchBarMenuItemEnabled = true;
+    [NSApplication sharedApplication].touchBar = self.sparkTouchBar;
+    
+    [self.faviconImage setFrame:CGRectMake(self.faviconImage.frame.origin.x, self.faviconImage.frame.origin.y, 16, 16)];
     
     // Set up WebView
     [self.webView setPolicyDelegate:(id<WebPolicyDelegate>)self];
@@ -2144,9 +2150,9 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
             [self handleFilePrefix];
         }
         
-        // Use Google to get website favicons
+        // Use Statvoo to get website favicons
         // In the future, Spark should be able to detect a favicon.ico instead of relying on a service to get favicons
-        faviconURLString = [NSString stringWithFormat:@"https://www.google.com/s2/favicons?domain=%@", websiteURL];
+        faviconURLString = [NSString stringWithFormat:@"https://api.statvoo.com/favicon/?url=%@", websiteURL];
         faviconURL = [NSURL URLWithString:faviconURLString];
         faviconData = [NSData dataWithContentsOfURL:faviconURL];
         websiteFavicon = [[NSImage alloc] initWithData:faviconData];
