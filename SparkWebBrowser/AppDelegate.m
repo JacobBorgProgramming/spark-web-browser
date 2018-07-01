@@ -239,8 +239,10 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
     //NSApplication.shared().isAutomaticCustomizeTouchBarMenuItemEnabled = true
     
     // Set up Touch Bar
-    [NSApplication sharedApplication].automaticCustomizeTouchBarMenuItemEnabled = true;
-    [NSApplication sharedApplication].touchBar = self.sparkTouchBar;
+    if([[NSProcessInfo processInfo] operatingSystemVersion].minorVersion >= 12) { // Check whether or not user is running macOS 10.12 or later
+        [NSApplication sharedApplication].automaticCustomizeTouchBarMenuItemEnabled = true;
+        [NSApplication sharedApplication].touchBar = self.sparkTouchBar;
+    }
     
     [self.faviconImage setFrame:CGRectMake(self.faviconImage.frame.origin.x, self.faviconImage.frame.origin.y, 16, 16)];
     
