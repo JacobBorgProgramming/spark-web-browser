@@ -207,7 +207,7 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
     operatingSystemBuildString = [sv objectForKey:@"ProductBuildVersion"]; // Get macOS build number
     macOSProductName = [sv objectForKey:@"ProductName"]; // Get macOS product name
     
-    if([[NSProcessInfo processInfo] operatingSystemVersion].minorVersion < 12) { // Check whether or not user is running macOS 10.12 or later
+    if([[NSProcessInfo processInfo] operatingSystemVersion].minorVersion < 12) { // Check whether or not user is running a version of macOS earlier than 10.12
         customMacOSProductName = @"OS X";
     } else {
         customMacOSProductName = @"macOS";
