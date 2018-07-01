@@ -1337,6 +1337,7 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
 
 - (void)handleFilePrefix {
     [self handleNoWebpageTitleSet];
+    self.faviconImage.image = [NSImage imageNamed:@"defaultfavicon"];
 }
 
 - (void)handleNoWebpageTitleSet {
@@ -2148,11 +2149,12 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
         // Check whether or not we're handling a local file
         if([self.addressBar.stringValue hasPrefix:@"file://"]) {
             [self handleFilePrefix];
+            return;
         }
         
-        // Use Statvoo to get website favicons
+        // Use BestIcon to get website favicons
         // In the future, Spark should be able to detect a favicon.ico instead of relying on a service to get favicons
-        faviconURLString = [NSString stringWithFormat:@"https://api.statvoo.com/favicon/?url=%@", websiteURL];
+        faviconURLString = [NSString stringWithFormat:@"https://besticon-demo.herokuapp.com/icon?url=%@&size=32", websiteURL];
         faviconURL = [NSURL URLWithString:faviconURLString];
         faviconData = [NSData dataWithContentsOfURL:faviconURL];
         websiteFavicon = [[NSImage alloc] initWithData:faviconData];
