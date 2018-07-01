@@ -8,7 +8,7 @@
 
 #import "NSImage+Resize.h"
 
-@implementation NSImage_Resize
+@implementation NSImage(resize)
 
 - (NSImage *)imageResize:(NSImage *)anImage newSize:(NSSize)newSize {
     NSImage *sourceImage = anImage;

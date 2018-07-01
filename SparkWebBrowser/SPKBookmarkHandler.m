@@ -30,8 +30,7 @@
             NSLog(@"SPKBookmarkHandler: Spark verified page detected - setting bookmarkIconData to avoid image scaling issues");
             bookmarkIconData = [[NSImage imageNamed:@"SparkFavicon"] TIFFRepresentation];
         } else {
-            bookmarkIconData = [bookmarkIcon TIFFRepresentation];
-            bookmarkIconData = [bookmarkIcon imageResize];
+            bookmarkIconData = [[bookmarkIcon imageResize:bookmarkIcon newSize:CGSizeMake(16, 16)] TIFFRepresentation];
         }
         
         currentBookmarksArray = [NSMutableArray array];
@@ -62,7 +61,7 @@
             NSLog(@"SPKBookmarkHandler: Spark verified page detected - setting bookmarkIconData to avoid image scaling issues");
             bookmarkIconData = [[NSImage imageNamed:@"SparkFavicon"] TIFFRepresentation];
         } else {
-            bookmarkIconData = [bookmarkIcon TIFFRepresentation];
+            bookmarkIconData = [[bookmarkIcon imageResize:bookmarkIcon newSize:CGSizeMake(16, 16)] TIFFRepresentation];
         }
         
         currentBookmarksArray = [[defaults objectForKey:@"storedBookmarksArray"] mutableCopy];
