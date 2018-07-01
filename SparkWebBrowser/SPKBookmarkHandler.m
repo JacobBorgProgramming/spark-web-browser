@@ -8,6 +8,7 @@
 
 #import "SPKBookmarkHandler.h"
 #import "AppDelegate.h"
+#import "NSImage+Resize.h"
 
 @implementation SPKBookmarkHandler
 
@@ -30,7 +31,7 @@
             bookmarkIconData = [[NSImage imageNamed:@"SparkFavicon"] TIFFRepresentation];
         } else {
             bookmarkIconData = [bookmarkIcon TIFFRepresentation];
-            bookmarkIconData = [bookmarkIcon imageResize:bookmarkIcon, CGSizeMake(16, 16)];
+            bookmarkIconData = [bookmarkIcon imageResize];
         }
         
         currentBookmarksArray = [NSMutableArray array];

@@ -6,14 +6,10 @@
 //  Copyright © 2018 Insleep. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface NSImage_Resize : NSImage
+@interface NSImage(resize)
 
 - (NSImage *)imageResize:(NSImage *)anImage newSize:(NSSize)newSize;
 
 @end
-
-NS_ASSUME_NONNULL_END
