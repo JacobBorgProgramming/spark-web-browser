@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14269.12"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="14269.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="14211.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14269.14"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="14269.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="the Touch Bar" minToolsVersion="8.1" minSystemVersion="10.12.2" requiredIntegratedClassName="NSTouchBar"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -1849,7 +1851,7 @@ DQ
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="692.5" y="-348.5"/>
+            <point key="canvasLocation" x="340" y="-354"/>
         </menu>
         <window title="History" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="cZf-cc-a2l">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
@@ -1948,6 +1950,43 @@ DQ
             </view>
             <point key="canvasLocation" x="1718" y="-78.5"/>
         </window>
+        <touchBar id="iWU-iX-urI">
+            <touchBarItems>
+                <touchBarItem id="NqO-iU-8NF">
+                    <viewController key="viewController" id="tQI-IP-xa5">
+                        <button key="view" verticalHuggingPriority="750" misplaced="YES" id="x6S-Yo-rAR">
+                            <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSGoLeftTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lRk-Jr-Dd5">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" usesAppearanceFont="YES"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="performClick:" target="CSR-Ik-wrT" id="1i0-nt-qR2"/>
+                            </connections>
+                        </button>
+                    </viewController>
+                    <size key="designTimeSize" width="72" height="30"/>
+                </touchBarItem>
+                <touchBarItem id="Nen-oA-mnm">
+                    <viewController key="viewController" id="lrA-UO-bhq">
+                        <button key="view" verticalHuggingPriority="750" id="iN2-3S-YMS">
+                            <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSGoRightTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JIP-8o-8Og">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" usesAppearanceFont="YES"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="performClick:" target="wRb-WG-N9I" id="1du-KQ-JLA"/>
+                            </connections>
+                        </button>
+                    </viewController>
+                    <size key="designTimeSize" width="72" height="30"/>
+                </touchBarItem>
+            </touchBarItems>
+            <point key="canvasLocation" x="768" y="-336"/>
+        </touchBar>
     </objects>
     <resources>
         <image name="AppIcon256" width="61.439998626708984" height="61.439998626708984"/>
@@ -1957,7 +1996,7 @@ DQ
         <image name="NSGoLeftTemplate" width="9" height="12"/>
         <image name="NSGoRightTemplate" width="9" height="12"/>
         <image name="NSHomeTemplate" width="14" height="14"/>
-        <image name="NSIconViewTemplate" width="10" height="10"/>
+        <image name="NSIconViewTemplate" width="14" height="10"/>
         <image name="NSListViewTemplate" width="14" height="10"/>
         <image name="NSMenuOnStateTemplate" width="12" height="12"/>
         <image name="NSRefreshTemplate" width="11" height="15"/>
