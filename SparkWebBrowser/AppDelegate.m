@@ -2151,14 +2151,6 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
             [self handleFilePrefix];
             return;
         }
-        
-        // Use BestIcon to get website favicons
-        // In the future, Spark should be able to detect a favicon.ico instead of relying on a service to get favicons
-        faviconURLString = [NSString stringWithFormat:@"https://besticon-demo.herokuapp.com/icon?url=%@&size=32", websiteURL];
-        faviconURL = [NSURL URLWithString:faviconURLString];
-        faviconData = [NSData dataWithContentsOfURL:faviconURL];
-        websiteFavicon = [[NSImage alloc] initWithData:faviconData];
-        self.faviconImage.image = websiteFavicon;
     }
 }
 
@@ -2178,6 +2170,15 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
             // Add webpage to history
             [historyHandler addHistoryItem:self.webView.mainFrameURL withHistoryTitle:self.webView.mainFrameTitle];
         }
+        
+        // Use BestIcon to get website favicons
+        // Doing this in didFinishLoadForFrame due to performance issues in didStartProvisionalLoadForFrame
+        // In the future, Spark should be able to detect a favicon.ico instead of relying on a service to get favicons
+        faviconURLString = [NSString stringWithFormat:@"https://besticon-demo.herokuapp.com/icon?url=%@&size=32", websiteURL];
+        faviconURL = [NSURL URLWithString:faviconURLString];
+        faviconData = [NSData dataWithContentsOfURL:faviconURL];
+        websiteFavicon = [[NSImage alloc] initWithData:faviconData];
+        self.faviconImage.image = websiteFavicon;
         
         [self.loadingIndicator stopAnimation:self];
         self.reloadBtn.image = [NSImage imageNamed:NSImageNameRefreshTemplate];
