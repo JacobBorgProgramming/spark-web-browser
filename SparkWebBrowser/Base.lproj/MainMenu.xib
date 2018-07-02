@@ -510,7 +510,7 @@
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" id="JIE-U0-fhO">
                             <font key="font" metaFont="miniSystem"/>
                             <string key="title">Copyright © 2014-2018 Insleep. All rights reserved.
-Spark is made possible by the WebKit open source project and other open source software.
+Spark is made possible by the WebKit open source project and its contributors.
 </string>
                             <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
