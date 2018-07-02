@@ -401,32 +401,6 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="History" id="lcH-NI-BJn">
                         <items>
-                            <menuItem title="Home" keyEquivalent="H" id="q4K-NN-nWc">
-                                <connections>
-                                    <action selector="loadHomepage:" target="Voe-Tx-rLC" id="SNF-wv-m6c"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Back" keyEquivalent="[" id="IkD-0T-yfr">
-                                <connections>
-                                    <action selector="goBack:" target="ffM-a6-P1L" id="ouR-mc-UR3"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Forward" keyEquivalent="]" id="rXS-v7-maI">
-                                <connections>
-                                    <action selector="goForward:" target="ffM-a6-P1L" id="nmj-Zc-DTb"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Back" hidden="YES" keyEquivalent="" id="2sC-Rd-WMr">
-                                <connections>
-                                    <action selector="goBack:" target="ffM-a6-P1L" id="khp-Ui-Pn8"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Forward" hidden="YES" keyEquivalent="" id="krd-Xn-9w6">
-                                <connections>
-                                    <action selector="goForward:" target="ffM-a6-P1L" id="sIe-Rj-pp3"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem isSeparatorItem="YES" id="gGS-TV-nRr"/>
                             <menuItem title="Show Full History" keyEquivalent="y" id="lBh-Xn-2Mc">
                                 <connections>
                                     <action selector="makeKeyAndOrderFront:" target="cZf-cc-a2l" id="Uz2-SI-1Mv"/>
@@ -2035,7 +2009,7 @@ DQ
         <image name="NSRefreshTemplate" width="11" height="15"/>
         <image name="NSStopProgressFreestandingTemplate" width="14" height="14"/>
         <image name="TouchBarSearchIcon" width="16" height="16"/>
-        <image name="bing-search-engine-icon" width="32" height="32"/>
+        <image name="bing-search-engine-icon" width="24" height="24"/>
         <image name="duckduckgo-search-engine-icon" width="32" height="32"/>
         <image name="google-search-engine-icon" width="32" height="32"/>
         <image name="yahoo-search-engine-icon" width="32" height="32"/>
