@@ -42,7 +42,7 @@ To export a Spark build on Xcode 10, use the Xcode Organizer window, available t
 
 ## Nightly Builds
 
-Interested in testing out the latest Spark releases before they're available to the general public? You can enroll in the nightly release channel by installing Spark, clicking the settings gear, then selecting "Preferences," and clicking "Nightly" under the "Release Channel" section. _Please note that nightly builds are not fully tested and are subject to issues._
+Interested in testing out the latest Spark releases before they're available to the general public? You can enroll in the nightly release channel by installing Spark, clicking the settings gear, then selecting "Preferences," and clicking "Nightly" under the "Release Channel" section. **Please note that nightly builds are not fully tested and are subject to issues.**
 
 ## [Known Issues](https://github.com/insleep/spark-web-browser/issues/)
 
