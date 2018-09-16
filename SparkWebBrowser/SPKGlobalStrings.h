@@ -32,6 +32,9 @@ NSString *macOSProductName = nil;
 /// Edited macOS product name
 NSString *customMacOSProductName = nil;
 
+/// Current interface style (dark/light)
+NSString *interfaceStyle = nil;
+
 /// Spark release channel
 NSString *releaseChannel = nil;
 

@@ -206,6 +206,7 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
     operatingSystemVersionString = [sv objectForKey:@"ProductVersion"]; // Get macOS version
     operatingSystemBuildString = [sv objectForKey:@"ProductBuildVersion"]; // Get macOS build number
     macOSProductName = [sv objectForKey:@"ProductName"]; // Get macOS product name
+    interfaceStyle = [[NSUserDefaults standardUserDefaults] stringForKey:@"AppleInterfaceStyle"];
     
     if([[NSProcessInfo processInfo] operatingSystemVersion].minorVersion < 12) { // Check whether or not user is running a version of macOS earlier than 10.12
         customMacOSProductName = @"OS X";
@@ -1845,39 +1846,52 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
 - (void)mouseEntered:(NSEvent *)theEvent {
     // Mouse entered tracking area
     
-    // The following code is broken on 10.14 Mojave (18A293u)
-    
-    if([[theEvent trackingArea] isEqual:backBtnTrackingArea]) {
-        [[self.backBtn cell] setBackgroundColor:[NSColor colorWithRed:230.0f/255.0f green:230.0f/255.0f blue:230.0f/255.0f alpha:1.0f]];
-    } else if([[theEvent trackingArea] isEqual:forwardBtnTrackingArea]) {
-        [[self.forwardBtn cell] setBackgroundColor:[NSColor colorWithRed:230.0f/255.0f green:230.0f/255.0f blue:230.0f/255.0f alpha:1.0f]];
-    } else if([[theEvent trackingArea] isEqual:reloadBtnTrackingArea]) {
-        [[self.reloadBtn cell] setBackgroundColor:[NSColor colorWithRed:230.0f/255.0f green:230.0f/255.0f blue:230.0f/255.0f alpha:1.0f]];
-    } else if([[theEvent trackingArea] isEqual:homeBtnTrackingArea]) {
-        [[self.homeBtn cell] setBackgroundColor:[NSColor colorWithRed:230.0f/255.0f green:230.0f/255.0f blue:230.0f/255.0f alpha:1.0f]];
-    } else if([[theEvent trackingArea] isEqual:settingsBtnTrackingArea]) {
-        [[self.settingsBtn cell] setBackgroundColor:[NSColor colorWithRed:230.0f/255.0f green:230.0f/255.0f blue:230.0f/255.0f alpha:1.0f]];
-    } else if([[theEvent trackingArea] isEqual:sparkSecurePageViewTrackingArea]) {
-        self.sparkSecurePageView.hidden = NO;
-        self.titleStatus.toolTip = @"";
+    if([interfaceStyle isEqual: @"Dark"]) { // Dark mode
+        if([[theEvent trackingArea] isEqual:backBtnTrackingArea]) {
+            [[self.backBtn cell] setBackgroundColor:[NSColor colorWithRed:53.0f/255.0f green:56.0f/255.0f blue:58.0f/255.0f alpha:1.0f]];
+        } else if([[theEvent trackingArea] isEqual:forwardBtnTrackingArea]) {
+            [[self.forwardBtn cell] setBackgroundColor:[NSColor colorWithRed:53.0f/255.0f green:56.0f/255.0f blue:58.0f/255.0f alpha:1.0f]];
+        } else if([[theEvent trackingArea] isEqual:reloadBtnTrackingArea]) {
+            [[self.reloadBtn cell] setBackgroundColor:[NSColor colorWithRed:53.0f/255.0f green:56.0f/255.0f blue:58.0f/255.0f alpha:1.0f]];
+        } else if([[theEvent trackingArea] isEqual:homeBtnTrackingArea]) {
+            [[self.homeBtn cell] setBackgroundColor:[NSColor colorWithRed:53.0f/255.0f green:56.0f/255.0f blue:58.0f/255.0f alpha:1.0f]];
+        } else if([[theEvent trackingArea] isEqual:settingsBtnTrackingArea]) {
+            [[self.settingsBtn cell] setBackgroundColor:[NSColor colorWithRed:53.0f/255.0f green:56.0f/255.0f blue:58.0f/255.0f alpha:1.0f]];
+        } else if([[theEvent trackingArea] isEqual:sparkSecurePageViewTrackingArea]) {
+            self.sparkSecurePageView.hidden = NO;
+            self.titleStatus.toolTip = @"";
+        }
+    } else { // Light mode
+        if([[theEvent trackingArea] isEqual:backBtnTrackingArea]) {
+            [[self.backBtn cell] setBackgroundColor:[NSColor colorWithRed:230.0f/255.0f green:230.0f/255.0f blue:230.0f/255.0f alpha:1.0f]];
+        } else if([[theEvent trackingArea] isEqual:forwardBtnTrackingArea]) {
+            [[self.forwardBtn cell] setBackgroundColor:[NSColor colorWithRed:230.0f/255.0f green:230.0f/255.0f blue:230.0f/255.0f alpha:1.0f]];
+        } else if([[theEvent trackingArea] isEqual:reloadBtnTrackingArea]) {
+            [[self.reloadBtn cell] setBackgroundColor:[NSColor colorWithRed:230.0f/255.0f green:230.0f/255.0f blue:230.0f/255.0f alpha:1.0f]];
+        } else if([[theEvent trackingArea] isEqual:homeBtnTrackingArea]) {
+            [[self.homeBtn cell] setBackgroundColor:[NSColor colorWithRed:230.0f/255.0f green:230.0f/255.0f blue:230.0f/255.0f alpha:1.0f]];
+        } else if([[theEvent trackingArea] isEqual:settingsBtnTrackingArea]) {
+            [[self.settingsBtn cell] setBackgroundColor:[NSColor colorWithRed:230.0f/255.0f green:230.0f/255.0f blue:230.0f/255.0f alpha:1.0f]];
+        } else if([[theEvent trackingArea] isEqual:sparkSecurePageViewTrackingArea]) {
+            self.sparkSecurePageView.hidden = NO;
+            self.titleStatus.toolTip = @"";
+        }
     }
 }
 
 - (void)mouseExited:(NSEvent *)theEvent {
     // Mouse exited tracking area
     
-    // The following code is broken on 10.14 Mojave (18A293u)
-    
     if([[theEvent trackingArea] isEqual:backBtnTrackingArea]) {
-        [[self.backBtn cell] setBackgroundColor:[NSColor whiteColor]];
+        [[self.backBtn cell] setBackgroundColor:[NSColor clearColor]];
     } else if([[theEvent trackingArea] isEqual:forwardBtnTrackingArea]) {
-        [[self.forwardBtn cell] setBackgroundColor:[NSColor whiteColor]];
+        [[self.forwardBtn cell] setBackgroundColor:[NSColor clearColor]];
     } else if([[theEvent trackingArea] isEqual:reloadBtnTrackingArea]) {
-        [[self.reloadBtn cell] setBackgroundColor:[NSColor whiteColor]];
+        [[self.reloadBtn cell] setBackgroundColor:[NSColor clearColor]];
     } else if([[theEvent trackingArea] isEqual:homeBtnTrackingArea]) {
-        [[self.homeBtn cell] setBackgroundColor:[NSColor whiteColor]];
+        [[self.homeBtn cell] setBackgroundColor:[NSColor clearColor]];
     } else if([[theEvent trackingArea] isEqual:settingsBtnTrackingArea]) {
-        [[self.settingsBtn cell] setBackgroundColor:[NSColor whiteColor]];
+        [[self.settingsBtn cell] setBackgroundColor:[NSColor clearColor]];
     } else if([[theEvent trackingArea] isEqual:sparkSecurePageViewTrackingArea]) {
         self.sparkSecurePageView.hidden = YES;
     }
