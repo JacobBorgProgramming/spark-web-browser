@@ -16,7 +16,7 @@
     
     // Report an error if the source isn't a valid image
     if (![sourceImage isValid]) {
-        NSLog(@"Invalid Image");
+        NSLog(@"NSImageResize encountered an error: Invalid image");
     } else {
         NSImage *smallImage = [[NSImage alloc] initWithSize: newSize];
         [smallImage lockFocus];
