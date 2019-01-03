@@ -2,7 +2,7 @@
 //  SPKGlobalStrings.h
 //  Spark
 //
-//  Copyright (c) 2014-2018 Jonathan Wukitsch / Insleep
+//  Copyright (c) 2014-2019 Jonathan Wukitsch / Insleep
 //  This code is distributed under the terms and conditions of the GNU license.
 //  You may copy, distribute and modify the software as long as you track changes/dates in source files. Any modifications to or software including (via compiler) GPL-licensed code must also be made available under the GPL along with build & install instructions.
 
@@ -51,7 +51,7 @@ NSString *clippedTitle = nil;
 NSString *lastSession = nil;
 
 /// Used when setting user agent
-NSString *currentChromeVersion = @"70.0.3538.110";
+NSString *currentChromeVersion = @"71.0.3578.98";
 
 
 /* Appcast URL strings */
