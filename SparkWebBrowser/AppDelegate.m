@@ -414,7 +414,7 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
     if([defaults boolForKey:@"showHomeBtn"] == YES) {
         self.showHomeBtn.state = NSOnState;
         self.homeBtn.hidden = NO;
-        [self.addressBar setFrame:NSMakeRect(113, 595, 967, 22)];
+        //[self.addressBar setFrame:NSMakeRect(113, 595, 967, 22)];
         
         // Check whether or not Spark opened in full screen
         if(([self.window styleMask] & NSFullScreenWindowMask) == NSFullScreenWindowMask) {
@@ -424,7 +424,7 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
     } else {
         self.showHomeBtn.state = NSOffState;
         self.homeBtn.hidden = YES;
-        [self.addressBar setFrame:NSMakeRect(89, 595, 991, 22)];
+        //[self.addressBar setFrame:NSMakeRect(89, 595, 991, 22)];
         
         // Check whether or not Spark opened in full screen
         if(([self.window styleMask] & NSFullScreenWindowMask) == NSFullScreenWindowMask) {
@@ -914,7 +914,7 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
         [defaults setBool:YES forKey:@"showHomeBtn"];
         self.homeBtn.hidden = NO;
         
-        [self.addressBar setFrame:NSMakeRect(113, 595, 967, 22)];
+        //[self.addressBar setFrame:NSMakeRect(113, 595, 967, 22)];
         
     } else if([self.showHomeBtn state] == NSOffState) {
         // Off
@@ -922,7 +922,7 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
         [defaults setBool:NO forKey:@"showHomeBtn"];
         self.homeBtn.hidden = YES;
         
-        [self.addressBar setFrame:NSMakeRect(89, 595, 991, 22)];
+        //[self.addressBar setFrame:NSMakeRect(89, 595, 991, 22)];
     }
 }
 
@@ -1320,7 +1320,7 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
 - (IBAction)newTab:(id)sender {
     
     if([[defaults objectForKey:@"currentColor"] isEqual: @"Default"]) {
-        self.ntNotSupported.textColor = [NSColor blackColor];
+        self.ntNotSupported.textColor = [NSColor labelColor]; // 4/24/19 - Fix for Mojave dark mode
     } else {
         self.ntNotSupported.textColor = [NSColor whiteColor];
     }
