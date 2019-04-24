@@ -42,7 +42,6 @@ extern NSString *editedVersionString;
 extern NSString *userAgent;
 extern NSString *clippedTitle;
 extern NSString *lastSession;
-extern NSString *currentChromeVersion;
 
 /* Appcast URL strings */
 extern NSString *stableChannelAppcastURL;
@@ -216,7 +215,7 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
     
     releaseChannel = [NSString stringWithFormat:@"%@", [defaults objectForKey:@"currentReleaseChannel"]]; // Get current release channel
     editedVersionString = [operatingSystemVersionString stringByReplacingOccurrencesOfString:@"." withString:@"_"]; // Replace dots in version string with underscores
-    userAgent = [NSString stringWithFormat:@"Mozilla/5.0 (Macintosh; Intel %@ %@) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/%@ Safari/537.36 Spark/%@.%@", macOSProductName, editedVersionString, currentChromeVersion, appVersionString, appBuildString]; // Set user agent respective to the current versions of Spark and macOS
+    userAgent = [NSString stringWithFormat:@"Mozilla/5.0 (Macintosh; Intel %@ %@) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1 Safari/605.1.15 Spark/%@.%@", macOSProductName, editedVersionString, appVersionString, appBuildString]; // Set user agent respective to the current versions of Spark and macOS
     
     untrustedSites = [NSMutableArray array]; // Set up untrusted sites array
 }
@@ -236,8 +235,6 @@ NSMutableArray *untrustedSites = nil; // Array of untrusted websites
     // Used for debugging purposes
     // NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
     // [defaults removePersistentDomainForName:appDomain];
-    
-    //NSApplication.shared().isAutomaticCustomizeTouchBarMenuItemEnabled = true
     
     // Set up Touch Bar
     if([[NSProcessInfo processInfo] operatingSystemVersion].minorVersion >= 12) { // Check whether or not user is running macOS 10.12 or later
