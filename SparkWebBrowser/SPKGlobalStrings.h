@@ -50,9 +50,6 @@ NSString *clippedTitle = nil;
 /// Value from NSUserDefaults of lastSession
 NSString *lastSession = nil;
 
-/// Used when setting user agent
-NSString *currentChromeVersion = @"74.0.3729.108";
-
 
 /* Appcast URL strings */
 
