@@ -4,9 +4,7 @@
 
 ## About
 
-Spark is a simple, lightweight browser for macOS built with the [WebKit](https://webkit.org) browser engine.
-
-Although being lightweight and easy-to-use, Spark is fast and powerful, and can load webpages in *seconds*.
+Spark is a simple, lightweight browser for macOS built with the [WebKit](https://webkit.org) browser engine. It is lightweight and easy-to-use while also being fast and powerful.
 
 Spark for macOS is compatible with macOS 10.12 Sierra and later. Earlier versions of macOS might work with some slight code changes, but are not supported.
 
