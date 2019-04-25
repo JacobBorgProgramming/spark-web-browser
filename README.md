@@ -6,7 +6,7 @@
 
 Spark is a simple, lightweight browser for macOS built with the [WebKit](https://webkit.org) browser engine. It is lightweight and easy-to-use while also being fast and powerful.
 
-Spark for macOS is compatible with macOS 10.12 Sierra and later. Earlier versions of macOS might work with some slight code changes, but are not supported.
+Spark for macOS is compatible with macOS 10.12 Sierra and later. Earlier versions of macOS might work with some slight code alterations, but are not supported.
 
 ## Screenshots
 
@@ -34,9 +34,9 @@ Open `Spark.xcodeproj`, located in the `SparkWebBrowser` directory of Spark for 
 
 Make any necessary changes and compile Spark within Xcode.
 
-To export a Spark build on Xcode 8/9, use the Xcode Organizer window, available through `Window > Organizer`. Click `Export...`, then `Export as a macOS App`.
+To export a Spark build on Xcode 8 or 9, use the Xcode Organizer window, available through `Window > Organizer`. Click `Export...`, then `Export as a macOS App`.
 
-To export a Spark build on Xcode 10, use the Xcode Organizer window, available through `Window > Organizer`. Click `Distribute App`, then `Export App`.
+To export a Spark build on Xcode 10 or later, use the Xcode Organizer window, available through `Window > Organizer`. Click `Distribute App`, then `Export App`.
 
 ## Nightly Builds
 
