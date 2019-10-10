@@ -106,11 +106,11 @@
         </customObject>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
-                <menuItem title="Spark" id="1Xt-HY-uBw">
+                <menuItem title="BrowserX" id="1Xt-HY-uBw">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="Spark" systemMenu="apple" id="uQy-DD-JDr">
+                    <menu key="submenu" title="BrowserX" systemMenu="apple" id="uQy-DD-JDr">
                         <items>
-                            <menuItem title="About Spark" id="5kV-Vb-QxS">
+                            <menuItem title="About BrowserX" id="5kV-Vb-QxS">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="openAboutWindow:" target="Voe-Tx-rLC" id="qMD-QL-NB9"/>
@@ -129,7 +129,7 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="DVR-aL-kRi"/>
-                            <menuItem title="Hide Spark" keyEquivalent="h" id="Olw-nP-bQN">
+                            <menuItem title="Hide BrowserX" keyEquivalent="h" id="Olw-nP-bQN">
                                 <connections>
                                     <action selector="hide:" target="-1" id="PnN-Uc-m68"/>
                                 </connections>
@@ -147,7 +147,7 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                            <menuItem title="Quit Spark" keyEquivalent="q" id="4sb-4s-VLi">
+                            <menuItem title="Quit" keyEquivalent="q" id="4sb-4s-VLi">
                                 <connections>
                                     <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
                                 </connections>
@@ -472,20 +472,8 @@
                                     <action selector="viewReleaseNotes:" target="Voe-Tx-rLC" id="y8M-W9-SIy"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Feature Roadmap" id="Lkx-rr-g6y">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <connections>
-                                    <action selector="viewFeatureRoadmap:" target="Voe-Tx-rLC" id="ddE-2B-sVk"/>
-                                </connections>
-                            </menuItem>
                             <menuItem isSeparatorItem="YES" id="yX2-xh-ELo"/>
-                            <menuItem title="Report an Issue..." id="1IG-TP-NUB">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <connections>
-                                    <action selector="reportIssue:" target="Voe-Tx-rLC" id="n0Q-py-vaY"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Spark Help" keyEquivalent="?" id="vUW-Uo-h2P">
+                            <menuItem title="Help" keyEquivalent="?" id="vUW-Uo-h2P">
                                 <connections>
                                     <action selector="showHelp:" target="-1" id="OKF-cq-Vhp"/>
                                 </connections>
@@ -496,8 +484,8 @@
             </items>
             <point key="canvasLocation" x="944" y="-736"/>
         </menu>
-        <window title="About Spark" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="oJi-1c-Sb5" customClass="NSPanel">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+        <window title="About BrowserX" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="oJi-1c-Sb5" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" fullSizeContentView="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="644" y="458" width="317" height="232"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
@@ -510,8 +498,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" id="JIE-U0-fhO">
                             <font key="font" metaFont="miniSystem"/>
-                            <string key="title">Copyright © 2014-2019 Insleep. All rights reserved.
-Spark is made possible by the WebKit open source project and its contributors.
+                            <string key="title">Based on Insleeps BrowserX Web Browser. This is made possible by the WebKit open source project and its contributors.
 </string>
                             <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -520,7 +507,7 @@ Spark is made possible by the WebKit open source project and its contributors.
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="njf-5J-jAY">
                         <rect key="frame" x="20" y="165" width="47" height="47"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="AppIcon256" id="1Gv-lZ-5iA"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="browser512" id="1Gv-lZ-5iA"/>
                     </imageView>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="YES" id="xT8-6l-XnR">
                         <rect key="frame" x="73" y="172" width="77" height="33"/>
@@ -549,17 +536,6 @@ Spark is made possible by the WebKit open source project and its contributors.
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button verticalHuggingPriority="750" id="WGq-tv-AWA">
-                        <rect key="frame" x="168" y="52" width="135" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="Report an Issue" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dNw-dp-eHp">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="reportIssueAboutWindow:" target="Voe-Tx-rLC" id="Cpn-VE-lJ8"/>
-                        </connections>
-                    </button>
                     <button verticalHuggingPriority="750" id="kZy-dn-WEH">
                         <rect key="frame" x="14" y="52" width="154" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -575,8 +551,8 @@ Spark is made possible by the WebKit open source project and its contributors.
             </view>
             <point key="canvasLocation" x="943.5" y="-537"/>
         </window>
-        <window title="Clear Browsing Data" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="Ij2-1D-TQJ" customClass="NSPanel">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+        <window title="Clear Browsing Data" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="Ij2-1D-TQJ" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" fullSizeContentView="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="644" y="458" width="381" height="190"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
@@ -658,8 +634,8 @@ Gw
             </view>
             <point key="canvasLocation" x="1453.5" y="-806"/>
         </window>
-        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="MMA-4M-Pa4" userLabel="Preferences Window" customClass="NSPanel">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="MMA-4M-Pa4" userLabel="Preferences Window" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" fullSizeContentView="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="429" y="202" width="614" height="297"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
@@ -774,7 +750,7 @@ Gw
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                             <popUpButtonCell key="cell" type="push" title="Stable" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="4YV-0A-Ncg" id="5vz-Ww-6jw">
                                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="menu"/>
+                                                <font key="font" metaFont="system"/>
                                                 <menu key="menu" id="mEE-YO-AGn">
                                                     <items>
                                                         <menuItem title="Stable" state="on" id="4YV-0A-Ncg"/>
@@ -839,15 +815,15 @@ Gw
                                         <popUpButton verticalHuggingPriority="750" id="GYw-Eq-qx7">
                                             <rect key="frame" x="15" y="87" width="161" height="26"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <popUpButtonCell key="cell" type="push" title="Google" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="M4t-1k-gwL" id="PFJ-rh-BaU">
+                                            <popUpButtonCell key="cell" type="push" title="DuckDuckGo" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="nq3-GM-uav" id="PFJ-rh-BaU">
                                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="menu"/>
+                                                <font key="font" metaFont="system"/>
                                                 <menu key="menu" id="ESd-DK-qb0">
                                                     <items>
-                                                        <menuItem title="Google" state="on" image="google-search-engine-icon" id="M4t-1k-gwL"/>
+                                                        <menuItem title="DuckDuckGo" state="on" image="duckduckgo-search-engine-icon" id="nq3-GM-uav"/>
+                                                        <menuItem title="Google" image="google-search-engine-icon" id="M4t-1k-gwL"/>
                                                         <menuItem title="Bing" image="bing-search-engine-icon" id="iHg-JP-TzF"/>
                                                         <menuItem title="Yahoo!" image="yahoo-search-engine-icon" id="RpJ-j3-k0A"/>
-                                                        <menuItem title="DuckDuckGo" image="duckduckgo-search-engine-icon" id="nq3-GM-uav"/>
                                                         <menuItem isSeparatorItem="YES" id="toF-XD-kdO"/>
                                                         <menuItem title="Custom" id="jS2-St-NcO"/>
                                                     </items>
@@ -1042,7 +1018,7 @@ Gw
                                         <textField hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="YES" id="ccH-25-zj7">
                                             <rect key="frame" x="15" y="59" width="310" height="26"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Spark automatically adjusts some aspects of its interface based on your appearance preferences in macOS 10.14 Mojave." id="yLz-oN-ydh">
+                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="BrowserX automatically adjusts some aspects of its interface based on your appearance preferences in macOS 10.14 Mojave." id="yLz-oN-ydh">
                                                 <font key="font" metaFont="system" size="10"/>
                                                 <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1053,7 +1029,7 @@ Gw
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <popUpButtonCell key="cell" type="push" title="Default" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="WqL-EJ-PSp" id="VVQ-9h-rPw">
                                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="menu"/>
+                                                <font key="font" metaFont="system"/>
                                                 <menu key="menu" id="Nwt-Jy-HYO">
                                                     <items>
                                                         <menuItem title="Default" state="on" id="WqL-EJ-PSp"/>
@@ -1142,7 +1118,7 @@ Gw
             </view>
             <point key="canvasLocation" x="1470" y="-481.5"/>
         </window>
-        <window title="Configuration" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="qp2-Mq-gTe" userLabel="Config Window" customClass="NSPanel">
+        <window title="Configuration" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="qp2-Mq-gTe" userLabel="Config Window" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="577" y="497" width="525" height="213"/>
@@ -1197,7 +1173,7 @@ Gw
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="5ax-wd-HiW">
                         <rect key="frame" x="20" y="160" width="47" height="47"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="AppIcon256" id="Ggz-Tf-jA4"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="browser512" id="Ggz-Tf-jA4"/>
                     </imageView>
                     <button id="RpU-iM-YnY">
                         <rect key="frame" x="18" y="38" width="224" height="18"/>
@@ -1225,8 +1201,8 @@ Gw
             </view>
             <point key="canvasLocation" x="839.5" y="-919.5"/>
         </window>
-        <window allowsToolTipsWhenApplicationIsInactive="NO" frameAutosaveName="" animationBehavior="default" id="QvC-M9-y7g">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+        <window allowsToolTipsWhenApplicationIsInactive="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="256" y="175" width="1107" height="650"/>
@@ -1321,7 +1297,7 @@ Gw
                     <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" id="e3k-CE-CDi">
                         <rect key="frame" x="323" y="627" width="263" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Tabs are not available in this version of Spark." id="gfc-dE-ICK">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Tabs are not available in this version of BrowserX." id="gfc-dE-ICK">
                             <font key="font" metaFont="systemLight" size="12"/>
                             <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1344,12 +1320,12 @@ Gw
                     <popUpButton hidden="YES" verticalHuggingPriority="750" id="vH7-Li-e10">
                         <rect key="frame" x="1078" y="592" width="24" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                        <popUpButtonCell key="cell" type="push" title="Spark Settings Menu" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" transparent="YES" imageScaling="proportionallyDown" inset="2" pullsDown="YES" id="8Pm-Kt-Ofz">
+                        <popUpButtonCell key="cell" type="push" title="BrowserX Settings Menu" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" transparent="YES" imageScaling="proportionallyDown" inset="2" pullsDown="YES" id="8Pm-Kt-Ofz">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="menu"/>
+                            <font key="font" metaFont="system"/>
                             <menu key="menu" id="K2k-qd-8ea">
                                 <items>
-                                    <menuItem title="Spark Settings Menu" hidden="YES" id="fom-no-FU9">
+                                    <menuItem title="BrowserX Settings Menu" hidden="YES" id="fom-no-FU9">
                                         <modifierMask key="keyEquivalentModifierMask"/>
                                     </menuItem>
                                     <menuItem title="Full Screen" keyEquivalent="F" id="dBJ-ep-v0Y">
@@ -1420,7 +1396,7 @@ Gw
                                         <modifierMask key="keyEquivalentModifierMask"/>
                                         <menu key="submenu" title="Help" id="9Bd-9T-507">
                                             <items>
-                                                <menuItem title="About Spark" id="lHH-QS-cRn">
+                                                <menuItem title="About BrowserX" id="lHH-QS-cRn">
                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                     <connections>
                                                         <action selector="openAboutWindow:" target="Voe-Tx-rLC" id="OQZ-RK-Q99"/>
@@ -1497,7 +1473,7 @@ Gw
                                 <rect key="frame" x="78" y="30" width="219" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Zero KB/Zero KB" id="dTj-TK-3Op">
-                                    <font key="font" metaFont="smallSystem"/>
+                                    <font key="font" metaFont="menu" size="11"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -1614,7 +1590,7 @@ Gw
                                 <rect key="frame" x="75" y="65" width="205" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" alignment="left" title="SPKBookmarkSiteAddress" placeholderString="" id="Ari-UZ-byq">
-                                    <font key="font" metaFont="smallSystem"/>
+                                    <font key="font" metaFont="menu" size="11"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -1652,7 +1628,7 @@ Gw
                                 <rect key="frame" x="19" y="20" width="289" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Loading..." id="idb-W0-H0u">
-                                    <font key="font" metaFont="smallSystem"/>
+                                    <font key="font" metaFont="menu" size="11"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -1684,7 +1660,7 @@ Gw
                                 <rect key="frame" x="29" y="19" width="279" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="SPKSecurePageIndicatorDetailText" id="4m1-3i-SVD">
-                                    <font key="font" metaFont="smallSystem"/>
+                                    <font key="font" metaFont="menu" size="11"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -1704,8 +1680,8 @@ Gw
             </view>
             <point key="canvasLocation" x="867.5" y="77"/>
         </window>
-        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="uuQ-xY-3aS" customClass="NSPanel">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" id="uuQ-xY-3aS" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" fullSizeContentView="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="731" y="406" width="348" height="228"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
@@ -1749,8 +1725,8 @@ DQ
             </view>
             <point key="canvasLocation" x="340" y="-891"/>
         </window>
-        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="mqa-o5-dlu" customClass="NSPanel">
-            <windowStyleMask key="styleMask" titled="YES"/>
+        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" id="mqa-o5-dlu" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" fullSizeContentView="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="731" y="446" width="391" height="254"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
@@ -1829,7 +1805,7 @@ DQ
             </items>
             <point key="canvasLocation" x="340" y="-354"/>
         </menu>
-        <window title="History" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="cZf-cc-a2l">
+        <window title="History" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="cZf-cc-a2l">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="207" width="480" height="341"/>
@@ -1847,14 +1823,14 @@ DQ
                             <subviews>
                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" multipleSelection="NO" autosaveColumns="NO" headerView="Hme-14-Aax" id="Exy-nG-ZCS">
                                     <rect key="frame" x="0.0" y="0.0" width="480" height="275"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <tableColumns>
                                         <tableColumn identifier="historyTitle" editable="NO" width="477" minWidth="40" maxWidth="1000" id="hEv-RG-36n">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Website">
-                                                <font key="font" metaFont="smallSystem"/>
+                                                <font key="font" metaFont="menu" size="11"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                             </tableHeaderCell>
@@ -1998,7 +1974,6 @@ DQ
         </touchBar>
     </objects>
     <resources>
-        <image name="AppIcon256" width="128" height="128"/>
         <image name="NSActionTemplate" width="14" height="14"/>
         <image name="NSAddTemplate" width="11" height="11"/>
         <image name="NSBookmarksTemplate" width="17" height="18"/>
@@ -2012,6 +1987,7 @@ DQ
         <image name="NSStopProgressFreestandingTemplate" width="14" height="14"/>
         <image name="TouchBarSearchIcon" width="16" height="16"/>
         <image name="bing-search-engine-icon" width="16" height="16"/>
+        <image name="browser512" width="512" height="512"/>
         <image name="duckduckgo-search-engine-icon" width="16" height="16"/>
         <image name="google-search-engine-icon" width="16" height="16"/>
         <image name="yahoo-search-engine-icon" width="16" height="16"/>

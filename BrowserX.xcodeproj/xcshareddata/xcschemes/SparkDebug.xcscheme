@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AB83980319817D8E001D31B7"
                BuildableName = "Spark.app"
-               BlueprintName = "Spark"
-               ReferencedContainer = "container:Spark.xcodeproj">
+               BlueprintName = "BrowserX"
+               ReferencedContainer = "container:BrowserX.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AB83980319817D8E001D31B7"
             BuildableName = "Spark.app"
-            BlueprintName = "Spark"
-            ReferencedContainer = "container:Spark.xcodeproj">
+            BlueprintName = "BrowserX"
+            ReferencedContainer = "container:BrowserX.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -57,8 +57,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AB83980319817D8E001D31B7"
             BuildableName = "Spark.app"
-            BlueprintName = "Spark"
-            ReferencedContainer = "container:Spark.xcodeproj">
+            BlueprintName = "BrowserX"
+            ReferencedContainer = "container:BrowserX.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -83,8 +83,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AB83980319817D8E001D31B7"
             BuildableName = "Spark.app"
-            BlueprintName = "Spark"
-            ReferencedContainer = "container:Spark.xcodeproj">
+            BlueprintName = "BrowserX"
+            ReferencedContainer = "container:BrowserX.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
